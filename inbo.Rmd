@@ -38,7 +38,7 @@ science <- staff - admin - sum(wo)
     - organisations involved in nature conservation, forestry, agriculture, hunting and fishery
 - `r staff` staff
     - `r science` scientific staff (scientists + technicians)
-    - `r sum(wo)` scientist support staff
+    - `r sum(wo)` support for scientific staff
     - `r admin` management + administrative staff
 
 ## Data collection and provision
@@ -50,7 +50,7 @@ science <- staff - admin - sum(wo)
     - [ALTER-Net](http://www.alter-net.info): A Long-Term Biodiversity, Ecosystem and Awareness Research Network
     - ...
 
-## Scientist support staff
+## Support for scientific staff
 
 - 5 specialised teams dedicated to support the scientific staff
     1. Biometry, Methodology & Quality assurance (`r wo["BMK"]`)
