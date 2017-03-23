@@ -1,6 +1,6 @@
 ---
 title: "Supporting scientific research @ INBO"
-author: "Dimitri Brosens, Peter Desmet, Daniel Du Seuil, Ivy Jansen, Els Lommelen, Jo Loos, Tania Milotic, Thierry Onkelinx, Paul Quataert, Frederic Piesschaert, Hans Van Calster, Toon Van Daele, Floris Vanderhaeghe, Gert Van Spaendonck, Stijn Van Hoey, Pieter Verschelde, Toon Westra, Carine Wils"
+author: "Dimitri Brosens, Peter Desmet, Daniel Du Seuil, Ivy Jansen, Els Lommelen, Jo Loos, Tanja Milotic, Thierry Onkelinx, Paul Quataert, Frederic Piesschaert, Hans Van Calster, Toon Van Daele, Floris Vanderhaeghe, Gert Van Spaendonck, Stijn Van Hoey, Pieter Verschelde, Toon Westra, Carine Wils"
 date: "March 31, 2017"
 output: 
   INBOmd::inbo_slides:
