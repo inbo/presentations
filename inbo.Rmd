@@ -53,16 +53,17 @@ science <- staff - admin - sum(wo)
 ## Scientific support staff
 
 - 5 specialised teams dedicated to support the scientific staff
-    1. Biometrics & Quality assurance (`r wo["BMK"]`)
+    1. Biometry, Methodology & Quality assurance (`r wo["BMK"]`)
     1. Open data & open research (`r wo["Data"]`)
     1. Laboratory  (`r wo["Lab"]`)
     1. IT operations & development  (`r wo["ICT"]`)
     1. Library  (`r wo["Bib"]`)
 
-# Biometrics & Quality assurance
+# Biometry, Methodology & Quality assurance
 
 ## A scientific corporate identity and quality assurance
 
+- involvement from design phase up to implementation phase
 - creating, evaluating and adjusting procedures
     - harmonising protocols for data collection
     - validation of data through statistical modelling
@@ -83,15 +84,18 @@ science <- staff - admin - sum(wo)
     - templates for basic analyses
     - corporate identity styles for graphics (ggplot2) and dynamics documents (markdown, LaTeX, HTML)
 - implementing methodologies
-    - standardise analyses with focus on long term monitoring and common experiments
-    - testing new analysis techniques
-    - developing new analysis techniques
+    - standardise methods and analyses with focus on long term monitoring and common experiments
+    - testing new methods and analysis techniques
+    - developing new methods and analysis techniques
 - improving self-reliance of scientists
     - internal statistics courses ranging from "stats 101" to generalised linear mixed models
     - offer scientists tools to help themselves and each other: websites, webinars, books, ...
 
 ## Support and services
 
+- teaching
+    - statistical courses (sampling theory, GLM, GLMM, multivariate data analysis, ...)
+    - R and RStudio
 - consultancy
     - help desk: ad hoc questions on statistical techniques and R
     - sounding board: critical reflection on research goals, experimental design, statistical analysis, ...
