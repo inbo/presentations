@@ -1,6 +1,6 @@
 ---
 title: "Supporting scientific research @ INBO"
-author: "Dimitri Brosens, Peter Desmet, Daniel Duseuil, Ivy Jansen, Els Lommelen, Jo Loos, Tania Milotic, Thierry Onkelinx, Paul Quataert, Frederic Piesschaert, Hans Van Calster, Toon Van Daele, Floris Vanderhaeghe, Gert Van Spaendock, Stijn Van Hoey, Pieter Verschelde, Toon Westra, Carine Wils"
+author: "Dimitri Brosens, Peter Desmet, Daniel Du Seuil, Ivy Jansen, Els Lommelen, Jo Loos, Tania Milotic, Thierry Onkelinx, Paul Quataert, Frederic Piesschaert, Hans Van Calster, Toon Van Daele, Floris Vanderhaeghe, Gert Van Spaendonck, Stijn Van Hoey, Pieter Verschelde, Toon Westra, Carine Wils"
 date: "March 31, 2017"
 output: 
   INBOmd::inbo_slides:
@@ -38,7 +38,7 @@ science <- staff - admin - sum(wo)
     - organisations involved in nature conservation, forestry, agriculture, hunting and fishery
 - `r staff` staff
     - `r science` scientific staff (scientists + technicians)
-    - `r sum(wo)` scientific support staff
+    - `r sum(wo)` scientist support staff
     - `r admin` management + administrative staff
 
 ## Data collection and provision
@@ -50,7 +50,7 @@ science <- staff - admin - sum(wo)
     - [ALTER-Net](http://www.alter-net.info): A Long-Term Biodiversity, Ecosystem and Awareness Research Network
     - ...
 
-## Scientific support staff
+## Scientist support staff
 
 - 5 specialised teams dedicated to support the scientific staff
     1. Biometry, Methodology & Quality assurance (`r wo["BMK"]`)
@@ -90,6 +90,21 @@ science <- staff - admin - sum(wo)
 - improving self-reliance of scientists
     - internal statistics courses ranging from "stats 101" to generalised linear mixed models
     - offer scientists tools to help themselves and each other: websites, webinars, books, ...
+    
+## Leading specific projects
+
+Some projects are led by the team, in collaboration with scientists. These projects typically:
+
+- have more statistical or technological challenges
+- strive towards achieving higher quality and standardization levels at INBO
+- have a longer term
+
+Examples:
+
+- design and implementation of monitoring networks to support and evaluate Natura 2000 objectives
+- design and implementation of monitoring of nature management plans
+- elaboration of population modelling methods
+- ... (add other projects ?) - please review
 
 ## Support and services
 
