@@ -15,7 +15,9 @@ output:
 ```{r include = FALSE}
 library(knitr)
 opts_chunk$set(
-  echo = FALSE
+  echo = FALSE,
+  cache = TRUE,
+  autodep = TRUE
 )
 library(lme4)
 library(dplyr)
