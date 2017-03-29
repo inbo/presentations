@@ -225,3 +225,40 @@ dataset %>%
   scale_colour_manual("Anomaly", values = c("FALSE" = vl.grey3, "TRUE" = vl.darkred))
 ```
 
+## Visual estimates of plant cover
+
+\begincols
+
+\begincol{0.3}
+
+![](vegetation.jpg)\ 
+
+\endcol
+
+\begincol{0.7}
+
+- vertical projection of stems and leafs onto ground
+- fraction of projected area per plant species
+    - does not sum to 1
+- estimated in classes with different binwidth
+- ordinal data but often treated as continuous data
+- survey quadrant size ranges from 1 m² to 256 m²
+
+\endcol
+
+\endcols
+
+## Alternative: integral occurrence probability
+
+- measure the shortest distance $r_{ij}$ from sampling point $i$ to nearest plant part of species $j$
+    - $r_{ij} = 0$ when species $j$ covers the sampling point
+    - $r_{ij} = r_{max}$ when species $j$ is not found with $r_{max}$ around the sampling point
+- requires several sampling points per location
+- measured continous data instead of estimated ordinal data
+- $r^2 / r^2_{max} \sim BI(p_0, p_1, \mu, \phi)$ 
+    - $p_0$: cover estimated by point sampling
+    - $1 - p_1$: presence with a circle of $r_{max}$
+- integral occurence probability
+    - $1 - \mbox{E}(y) = 1 - (p_1 + (1 - p_0 - p_1) \mu)$
+    - $\frac{\sum^n_{i=1}(1 - r^2_i / r^2_{max})}{n}$
+
