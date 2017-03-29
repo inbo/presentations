@@ -17,6 +17,13 @@ library(knitr)
 opts_chunk$set(
   echo = FALSE
 )
+library(lme4)
+library(dplyr)
+library(ggplot2)
+library(INBOtheme)
+theme_set(theme_vlaanderen2015(6))
+update_geom_defaults("point", list(size = 0.5))
+update_geom_defaults("line", list(size = 0.2))
 ```
 
 ```{r}
@@ -108,7 +115,6 @@ Examples:
 - design and implementation of monitoring networks to support and evaluate Natura 2000 objectives
 - design and implementation of monitoring of nature management plans
 - elaboration of population modelling methods
-- ... (add other projects ?) - please review
 
 ## Support and services
 
@@ -123,3 +129,95 @@ Examples:
     - complex analyses requiring a full-fledged statistician
 - quality control
     - scientists can ask for a review of their code
+
+# Examples
+
+## Validation of data through statistical modelling
+
+- inspecting each data point is a large dataset is impractical
+- response is the result of an (unknown) data generating process
+- try to model the data generation process
+- look for strange values given the model
+    - strong residuals
+    - strong (hyper)parameters
+    - call $n = 10, 20, 50, \dots$ strongest "anomalies"
+- thoroughly inspect all observations linked to an anomaly
+    - something wrong with the observation?
+    - something wrong with the model?
+- remove irrelevant observations, fix typo's in observations, adjust model
+- repeat until 
+    - model makes sense
+    - all $n$ anomalies are relevant and correct observations
+
+## Example: height-diameter curves for trees
+
+```{r}
+dataset <- read.csv("tree.csv") %>%
+  mutate(lc130 = log(c130 / 100))
+model <- lmer(
+  height ~ poly(lc130, 2) + (poly(lc130, 2) | location),
+  data = dataset
+)
+dataset <- dataset %>%
+  mutate(
+    fit = fitted(model),
+    residual = residuals(model),
+    rank = n() - min_rank(abs(residual))
+  )
+max_rank <- 27
+dataset %>%
+  filter(rank <= max_rank) %>%
+  distinct(location) %>%
+  semi_join(x = dataset, by = "location") %>%
+  mutate(
+    anomaly = rank <= max_rank
+  ) %>%
+  arrange(desc(rank)) %>%
+  ggplot(aes(x = c130, y = height)) +
+  geom_jitter(
+    aes(colour = anomaly), 
+    position = position_jitter(width = 5, height = 0)
+  ) +
+  geom_line(aes(y = fit)) +
+  facet_wrap(~location) +
+  xlab("Circumference at 130 cm (cm)") +
+  ylab("Tree height (m)") +
+  scale_colour_manual("Anomaly", values = c("FALSE" = vl.grey3, "TRUE" = vl.darkred))
+```
+
+## Example: updated height-diameter curves for trees
+
+```{r}
+dataset <- dataset %>%
+  filter(rank > max_rank)
+model <- lmer(
+  height ~ poly(lc130, 2) + (poly(lc130, 2) | location),
+  data = dataset
+)
+dataset <- dataset %>%
+  mutate(
+    fit = fitted(model),
+    residual = residuals(model),
+    rank = n() - min_rank(abs(residual))
+  )
+max_rank <- 29
+dataset %>%
+  filter(rank <= max_rank) %>%
+  distinct(location) %>%
+  semi_join(x = dataset, by = "location") %>%
+  mutate(
+    anomaly = rank <= max_rank
+  ) %>%
+  arrange(desc(rank)) %>%
+  ggplot(aes(x = c130, y = height)) +
+  geom_jitter(
+    aes(colour = anomaly), 
+    position = position_jitter(width = 5, height = 0)
+  ) +
+  geom_line(aes(y = fit)) +
+  facet_wrap(~location) +
+  xlab("Circumference at 130 cm (cm)") +
+  ylab("Tree height (m)") +
+  scale_colour_manual("Anomaly", values = c("FALSE" = vl.grey3, "TRUE" = vl.darkred))
+```
+
