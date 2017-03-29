@@ -139,19 +139,19 @@ Examples:
 ## Validation of data through statistical modelling
 
 - inspecting each data point is a large dataset is impractical
-- response is the result of an (unknown) data generating process
-- try to model the data generation process
-- look for strange values given the model
+- observed value is the result of an (unknown) data generating process
+- try to model the data generating process
+- look for exterme values given the model
     - strong residuals
     - strong (hyper)parameters
-    - call $n = 10, 20, 50, \dots$ strongest "anomalies"
+    - "anomalies": $n$ strongest values
 - thoroughly inspect all observations linked to an anomaly
     - something wrong with the observation?
     - something wrong with the model?
-- remove irrelevant observations, fix typo's in observations, adjust model
+- remove irrelevant observations, fix typos, adjust model
 - repeat until 
     - model makes sense
-    - all $n$ anomalies are relevant and correct observations
+    - all anomalies are relevant and correct observations
 
 ## Example: height-diameter curves for trees
 
