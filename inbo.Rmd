@@ -28,9 +28,10 @@ update_geom_defaults("line", list(size = 0.2))
 
 ```{r}
 staff <- 262
-admin <- 31
+admin <- 22
+management <- 9
 wo <- c(BMK = 8, Data = 8, ICT = 6, Lab = 10, Bib = 8)
-science <- staff - admin - sum(wo)
+science <- staff - admin - sum(wo) - management
 ```
 
 # INBO
@@ -62,7 +63,8 @@ science <- staff - admin - sum(wo)
 - `r staff` staff
     - `r science` scientific staff (scientists + technicians)
     - `r sum(wo)` support for scientific staff
-    - `r admin` management + administrative staff
+    - `r admin` administrative staff
+    - `r management` management
 - 5 specialised teams dedicated to support the scientific staff
     1. Biometry, Methodology & Quality assurance (`r wo["BMK"]`)
     1. Open data & open research (`r wo["Data"]`)
