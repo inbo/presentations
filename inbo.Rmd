@@ -97,7 +97,7 @@ science <- staff - admin - sum(wo) - management
 - maintaining tools
     - software, manuals, documentation, books, ...
     - templates for basic analyses
-    - corporate identity styles for graphics (ggplot2) and dynamics documents (markdown, LaTeX, HTML)
+    - corporate identity styles for graphics (ggplot2) and dynamic documents (markdown, LaTeX, HTML)
 - implementing methodologies
     - standardise methods and analyses with focus on long term monitoring and common experiments
     - testing new methods and analysis techniques
@@ -138,10 +138,10 @@ Examples:
 
 ## Validation of data through statistical modelling
 
-- inspecting each data point is a large dataset is impractical
+- inspecting each data point in a large dataset is impractical
 - observed value is the result of an (unknown) data generating process
 - try to model the data generating process
-- look for exterme values given the model
+- look for extreme values given the model
     - strong residuals
     - strong (hyper)parameters
     - "anomalies": $n$ strongest values
@@ -252,13 +252,13 @@ dataset %>%
 
 - measure the shortest distance $r_{ij}$ from sampling point $i$ to nearest plant part of species $j$
     - $r_{ij} = 0$ when species $j$ covers the sampling point
-    - $r_{ij} = r_{max}$ when species $j$ is not found with $r_{max}$ around the sampling point
+    - $r_{ij} = r_{max}$ when species $j$ is not found within $r_{max}$ around the sampling point
 - requires several sampling points per location
-- measured continous data instead of estimated ordinal data
+- measured continuous data instead of visually estimated ordinal data
 - $r^2 / r^2_{max} \sim BI(p_0, p_1, \mu, \phi)$ 
     - $p_0$: cover estimated by point sampling
-    - $1 - p_1$: presence with a circle of $r_{max}$
-- integral occurence probability
-    - $1 - \mbox{E}(y) = 1 - (p_1 + (1 - p_0 - p_1) \mu)$
+    - $1 - p_1$: presence within a circle of $r_{max}$
+- integral occurrence probability
+    - $1 - \mbox{E}(r^2 / r^2_{max}) = 1 - (p_1 + (1 - p_0 - p_1) \mu)$
     - $\frac{\sum^n_{i=1}(1 - r^2_i / r^2_{max})}{n}$
 
