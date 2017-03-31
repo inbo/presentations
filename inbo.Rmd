@@ -94,17 +94,17 @@ science <- staff - admin - sum(wo) - management
 
 ## Creating a methodological platform
 
-- maintaining tools
-    - software, manuals, documentation, books, ...
-    - templates for basic analyses
-    - corporate identity styles for graphics (ggplot2) and dynamic documents (markdown, LaTeX, HTML)
 - implementing methodologies
     - standardise methods and analyses with focus on long term monitoring and common experiments
     - testing new methods and analysis techniques
     - developing new methods and analysis techniques
 - improving self-reliance of scientists
-    - internal statistics courses ranging from "stats 101" to generalised linear mixed models
+    - internal statistics courses ranging from "stats 101" to generalised linear mixed models and multivariate analysis
     - offer scientists tools to help themselves and each other: websites, webinars, books, ...
+- maintaining tools
+    - software, manuals, documentation, books, ...
+    - templates for basic analyses
+    - corporate identity styles for graphics (ggplot2) and dynamic documents (markdown, LaTeX, HTML)
     
 ## Leading specific projects
 
@@ -123,7 +123,7 @@ Examples:
 ## Support and services
 
 - teaching
-    - statistical courses (sampling theory, GLM, GLMM, multivariate data analysis, ...)
+    - statistical courses (sampling theory, GLMM, multivariate data analysis, ...)
     - R and RStudio
 - consultancy
     - help desk: ad hoc questions on statistical techniques and R
