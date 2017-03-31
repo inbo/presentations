@@ -169,10 +169,11 @@ dataset <- dataset %>%
     rank = n() - min_rank(abs(residual))
   )
 max_rank <- 27
-dataset %>%
+relevant <- dataset %>%
   filter(rank <= max_rank) %>%
-  distinct(location) %>%
-  semi_join(x = dataset, by = "location") %>%
+  distinct(location) 
+dataset %>%
+  semi_join(relevant, by = "location") %>%
   mutate(
     anomaly = rank <= max_rank
   ) %>%
@@ -204,11 +205,8 @@ dataset <- dataset %>%
     residual = residuals(model),
     rank = n() - min_rank(abs(residual))
   )
-max_rank <- 29
 dataset %>%
-  filter(rank <= max_rank) %>%
-  distinct(location) %>%
-  semi_join(x = dataset, by = "location") %>%
+  semi_join(relevant, by = "location") %>%
   mutate(
     anomaly = rank <= max_rank
   ) %>%
