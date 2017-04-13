@@ -2,7 +2,8 @@
 title: "Supporting scientific research @ INBO"
 author: "Dimitri Brosens, Peter Desmet, Daniel Du Seuil, Ivy Jansen, Els Lommelen, Jo Loos, Tanja Milotic, Thierry Onkelinx, Paul Quataert, Frederic Piesschaert, Hans Van Calster, Toon Van Daele, Floris Vanderhaeghe, Gert Van Spaendonck, Stijn Van Hoey, Pieter Verschelde, Toon Westra, Carine Wils"
 date: "April 28, 2017"
-output: 
+output:
+  beamer_presentation: default
   INBOmd::inbo_slides:
     location: FLAMES annual meeting, Leuven
     institute: Research Institute for Nature and Forest (INBO)
@@ -25,7 +26,7 @@ library(lme4)
 library(dplyr)
 library(ggplot2)
 library(INBOtheme)
-theme_set(theme_vlaanderen2015(6))
+theme_set(theme_inbo2015(6))
 update_geom_defaults("point", list(size = 0.5))
 update_geom_defaults("line", list(size = 0.2))
 ```
