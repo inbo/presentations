@@ -1,0 +1,95 @@
+---
+title: "Supporting scientific research @ INBO"
+author: "Dimitri Brosens, Peter Desmet, Daniel Du Seuil, Ivy Jansen, Els Lommelen, Jo Loos, Tanja Milotic, Thierry Onkelinx, Paul Quataert, Frederic Piesschaert, Hans Van Calster, Toon Van Daele, Floris Vanderhaeghe, Gert Van Spaendonck, Stijn Van Hoey, Pieter Verschelde, Toon Westra, Carine Wils"
+date: "April 28, 2017"
+output: 
+  INBOmd::inbo_slides:
+    location: FLAMES annual meeting, Leuven
+    institute: Research Institute for Nature and Forest (INBO)
+    theme: inbo
+    cover: "Image00012.png"
+    cover_horizontal: FALSE
+    cover_hoffset: "-30mm"
+    lang: english
+    toc: FALSE
+---
+
+```{r include = FALSE}
+library(knitr)
+opts_chunk$set(
+  echo = FALSE,
+  cache = TRUE,
+  autodep = TRUE
+)
+library(lme4)
+library(dplyr)
+library(ggplot2)
+library(INBOtheme)
+theme_set(theme_vlaanderen2015(6))
+update_geom_defaults("point", list(size = 0.5))
+update_geom_defaults("line", list(size = 0.2))
+```
+
+```{r}
+staff <- 262
+admin <- 22
+management <- 9
+wo <- c(BMK = 8, Data = 8, ICT = 6, Lab = 10, Bib = 8)
+science <- staff - admin - sum(wo) - management
+```
+
+# INBO
+
+## INBO
+
+- Instituut voor Natuur- en Bosonderzoek / Research Institute for Nature and Forest
+- Flemish research and knowledge centre for nature and its sustainable management and use
+- conducts research and supplies knowledge to policy makers and stakeholders
+- supports
+    - agencies of Flemish government related with countryside or nature within urban areas
+    - organisations involved in nature conservation, forestry, agriculture, hunting and fishery
+
+## Data collection and provision
+
+- INBO collects and provides data for international reporting
+- Participates in (inter)national research networks
+    - [LTER](https://lternet.edu): the Long Term Ecological Research network
+    - [LifeWatch](http://www.lifewatch.eu): e-Science and Technology European Infrastructure for Biodiversity and Ecosystem Research 
+    - [ALTER-Net](http://www.alter-net.info): A Long-Term Biodiversity, Ecosystem and Awareness Research Network
+    - ...
+
+## Organigram
+
+![](KLEURORGANIGRAM_1.png)
+
+## Organigram
+
+![](KLEURORGANIGRAM_2.png)
+
+## Organigram
+
+![](KLEURORGANIGRAM_3.png)
+
+## Organigram
+
+![](KLEURORGANIGRAM_def.png)
+
+## Staff
+
+- `r staff` staff
+    - `r science` scientific staff (scientists + technicians)
+    - `r sum(wo)` support for scientific staff
+    - `r admin` administrative staff
+    - `r management` management
+- 5 specialised teams dedicated to support the scientific staff
+    1. Biometry, Methodology & Quality assurance (`r wo["BMK"]`)
+    1. Open data & open research (`r wo["Data"]`)
+    1. Laboratory  (`r wo["Lab"]`)
+    1. IT operations & development  (`r wo["ICT"]`)
+    1. Library  (`r wo["Bib"]`)
+
+# Biometry, Methodology & Quality assurance
+
+# Open data & open research
+
+# Vision on transparant policy supporting research
