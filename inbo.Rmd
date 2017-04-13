@@ -58,7 +58,19 @@ science <- staff - admin - sum(wo) - management
 
 ## Organigram
 
-![](organigram.png)
+![](KLEURORGANIGRAM_1.png)
+
+## Organigram
+
+![](KLEURORGANIGRAM_2.png)
+
+## Organigram
+
+![](KLEURORGANIGRAM_3.png)
+
+## Organigram
+
+![](KLEURORGANIGRAM_def.png)
 
 ## Staff
 
