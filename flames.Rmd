@@ -90,6 +90,43 @@ science <- staff - admin - sum(wo) - management
 
 # Biometry, Methodology & Quality assurance
 
+## Data validation through statistical modelling
+
+```{r}
+dataset <- read.csv("tree.csv") %>%
+  mutate(lc130 = log(c130 / 100))
+model <- lmer(
+  height ~ poly(lc130, 2) + (poly(lc130, 2) | location),
+  data = dataset
+)
+dataset <- dataset %>%
+  mutate(
+    fit = fitted(model),
+    residual = residuals(model),
+    rank = n() - min_rank(abs(residual))
+  )
+max_rank <- 27
+relevant <- dataset %>%
+  filter(rank <= max_rank) %>%
+  distinct(location) 
+dataset %>%
+  semi_join(relevant, by = "location") %>%
+  mutate(
+    anomaly = rank <= max_rank
+  ) %>%
+  arrange(desc(rank)) %>%
+  ggplot(aes(x = c130, y = height)) +
+  geom_jitter(
+    aes(colour = anomaly), 
+    position = position_jitter(width = 5, height = 0)
+  ) +
+  geom_line(aes(y = fit)) +
+  facet_wrap(~location) +
+  xlab("Circumference at 130 cm (cm)") +
+  ylab("Tree height (m)") +
+  scale_colour_manual("Anomaly", values = c("FALSE" = vl.grey3, "TRUE" = vl.darkred))
+```
+
 # Open data & open research
 
 # Vision on transparant policy supporting research
