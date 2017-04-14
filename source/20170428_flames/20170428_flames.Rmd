@@ -41,25 +41,35 @@ wo <- c(BMK = 8, Data = 8, ICT = 6, Lab = 10, Bib = 8)
 science <- staff - admin - sum(wo) - management
 ```
 
-# INBO
+# Who are we?
 
-## INBO
+##
 
-- Instituut voor Natuur- en Bosonderzoek / Research Institute for Nature and Forest
-- Flemish research and knowledge centre for nature and its sustainable management and use
-- conducts research and supplies knowledge to policy makers and stakeholders
-- supports
-    - agencies of Flemish government related with countryside or nature within urban areas
-    - organisations involved in nature conservation, forestry, agriculture, hunting and fishery
+The **Research Institute for Nature and Forest** (INBO)
 
-## Data collection and provision
+##
 
-- INBO collects and provides data for international reporting
-- Participates in (inter)national research networks
-    - [LTER](https://lternet.edu): the Long Term Ecological Research network
-    - [LifeWatch](http://www.lifewatch.eu): e-Science and Technology European Infrastructure for Biodiversity and Ecosystem Research 
-    - [ALTER-Net](http://www.alter-net.info): A Long-Term Biodiversity, Ecosystem and Awareness Research Network
-    - ...
+The Research Institute for Nature and Forest (INBO) is the **Flemish research and knowledge centre for nature and its sustainable management** and use.
+
+##
+
+The Research Institute for Nature and Forest (INBO) is the Flemish research and knowledge centre for nature and its sustainable management and use. The INBO **conducts research and supplies knowledge** to all those who prepare or make the **policies** or are interested in them as a stakeholder.
+
+##
+
+The Research Institute for Nature and Forest (INBO) is the Flemish research and knowledge centre for nature and its sustainable management and use. The INBO conducts research and supplies knowledge to all those who prepare or make the policies or are interested in them as a stakeholder. The INBO is an unincorporated internal agency of the **Flemish government**.
+
+##
+
+Through its scientific research, INBO supports all **agencies dealing with open space** in the Flemish government, as well as in **organisations** involved in nature conservation, forestry, agriculture, hunting and fishery.
+
+##
+
+Through its scientific research, INBO supports all agencies dealing with open space in the Flemish government, as well as in organisations involved in nature conservation, forestry, agriculture, hunting and fishery. INBO publishes its results as **open data** and provides data for **international reporting**.
+
+##
+
+Through its scientific research, INBO supports all agencies dealing with open space in the Flemish government, as well as in organisations involved in nature conservation, forestry, agriculture, hunting and fishery. INBO publishes its results as open data and provides data for international reporting. It participates in **(inter)national research networks** such as [LTER](https://lternet.edu), [ALTER-Net](http://www.alter-net.info), and [LifeWatch](http://www.lifewatch.eu).
 
 ## Organigram
 
