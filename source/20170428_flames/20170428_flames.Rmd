@@ -14,6 +14,7 @@ output:
     lang: english
     toc: FALSE
     fontsize: 12pt
+    slide_level: 3
   beamer_presentation: default
 ---
 
@@ -44,7 +45,7 @@ science <- staff - admin - sum(wo) - management
 # Who are we?
 
 
-## Instituut voor Natuur- en Bosonderzoek (INBO)
+### Instituut voor Natuur- en Bosonderzoek (INBO)
 
 > - Research Institute for Nature and Forest
 > - Flemish government
@@ -54,25 +55,27 @@ science <- staff - admin - sum(wo) - management
 > - provides data for **international reporting**
 > - part of international research networks: LTER, LifeWatch, ALTER-net, ...
 
-## 14 teams scientific staff (`r science` members)
+### 14 teams scientific staff (`r science` members)
 
-![](KLEURORGANIGRAM_1.png)
+![](KLEURORGANIGRAM_1.png)\ 
 
-## 5 teams in support of scientific staff (`r sum(wo)` members)
+### 5 teams in support of scientific staff (`r sum(wo)` members)
 
-![](KLEURORGANIGRAM_2.png)
+![](KLEURORGANIGRAM_2.png)\ 
 
-## 3 administrative teams (`r admin` members)
+### 3 administrative teams (`r admin` members)
 
-![](KLEURORGANIGRAM_3.png)
+![](KLEURORGANIGRAM_3.png)\ 
 
-## 1 management team (`r management` members)
+### 1 management team (`r management` members)
 
-![](KLEURORGANIGRAM_def.png)
+![](KLEURORGANIGRAM_def.png)\ 
 
 # Biometry, Methodology & Quality assurance
 
-## Provide tools to improve open and reproducible statistical analysis
+## Statistical support
+
+### Provide tools to improve open and reproducible statistical analysis
 
 > - R
 > - scripted analysis
@@ -80,11 +83,31 @@ science <- staff - admin - sum(wo) - management
 > - dynamic documents
 > - corporate identity styles for graphics and dynamic documents
 
-## Improve statistical skills of scientific staff
+### Improve statistical skills of scientific staff
 
 ![](20150628_0386.jpg)\ 
 
-## Data validation through statistical modelling
+## Methodological support
+
+### Partner during the entire life cycle of research
+
+> - Refine hypotheses
+> - Experimental design
+> - Statistical analysis
+> - Report results
+
+### Acquisition, development and maintainance of methodologies
+
+> - Concept for setting up long term monitoring
+> - Field protocols
+> - Novel statistical techniques
+> - Automation of recurring analyses
+> - Traceablity of analyses
+> - Recommended suite of software and tools
+
+## Statistical expertise
+
+### Data validation through statistical modelling
 
 ```{r}
 dataset <- read.csv("tree.csv") %>%
@@ -123,6 +146,10 @@ dataset %>%
     values = c("FALSE" = inbo.steun.geelgroen, "TRUE" = inbo.hoofd)
   )
 ```
+
+### Distance based estimates of vegetation cover
+
+![](vegetation.jpg)\ 
 
 # Open data & open research
 
