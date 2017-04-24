@@ -72,6 +72,18 @@ science <- staff - admin - sum(wo) - management
 
 # Biometry, Methodology & Quality assurance
 
+## Provide tools to improve open and reproducible statistical analysis
+
+> - R
+> - scripted analysis
+> - version control
+> - dynamic documents
+> - corporate identity styles for graphics and dynamic documents
+
+## Improve statistical skills of scientific staff
+
+![](20150628_0386.jpg)\ 
+
 ## Data validation through statistical modelling
 
 ```{r}
