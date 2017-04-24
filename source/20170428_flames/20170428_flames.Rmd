@@ -106,7 +106,10 @@ dataset %>%
   facet_wrap(~location) +
   xlab("Circumference at 130 cm (cm)") +
   ylab("Tree height (m)") +
-  scale_colour_manual("Anomaly", values = c("FALSE" = vl.grey3, "TRUE" = vl.darkred))
+  scale_colour_manual(
+    "Anomaly", 
+    values = c("FALSE" = inbo.steun.geelgroen, "TRUE" = inbo.hoofd)
+  )
 ```
 
 # Open data & open research
