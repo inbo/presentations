@@ -3,11 +3,9 @@ title: "Supporting scientific research at the INBO"
 author: "Dimitri Brosens, Peter Desmet, Daniel Du Seuil, Ivy Jansen, Els Lommelen, Jo Loos, Tanja Milotic, Thierry Onkelinx, Paul Quataert, Frederic Piesschaert, Hans Van Calster, Toon Van Daele, Floris Vanderhaeghe, Gert Van Spaendonck, Stijn Van Hoey, Pieter Verschelde, Toon Westra, Carine Wils"
 date: "April 28, 2017"
 output:
-  beamer_presentation: default
   INBOmd::inbo_slides:
-    event: FLAMES Annual Meeting 2017
     event_website: http://www.flames-statistics.eu/events/flames-annual-meeting-2017
-    location: KU Leuven
+    location: FLAMES Annual Meeting 2017, KU Leuven
     institute: Research Institute for Nature and Forest (INBO)
     theme: inbo
     cover: "Image00012.png"
@@ -15,6 +13,7 @@ output:
     cover_hoffset: "-30mm"
     lang: english
     toc: FALSE
+  beamer_presentation: default
 ---
 
 ```{r include = FALSE}
