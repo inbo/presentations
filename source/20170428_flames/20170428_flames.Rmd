@@ -1,11 +1,11 @@
 ---
-title: "Supporting scientific research @ INBO"
-author: "Dimitri Brosens, Peter Desmet, Daniel Du Seuil, Ivy Jansen, Els Lommelen, Jo Loos, Tanja Milotic, Thierry Onkelinx, Paul Quataert, Frederic Piesschaert, Hans Van Calster, Toon Van Daele, Floris Vanderhaeghe, Gert Van Spaendonck, Stijn Van Hoey, Pieter Verschelde, Toon Westra, Carine Wils"
+title: "Supporting scientific research at INBO"
+author: "D. Brosens, P. Desmet, D. Du Seuil, I. Jansen, E. Lommelen, J. Loos, T. Milotic, T. Onkelinx, P. Quataert, F. Piesschaert, H. Van Calster, T. Van Daele, F. Vanderhaeghe, G. Van Spaendonck, S. Van Hoey, P. Verschelde, T. Westra, C. Wils"
 date: "April 28, 2017"
 output:
-  beamer_presentation: default
   INBOmd::inbo_slides:
-    location: FLAMES annual meeting, Leuven
+    event_website: http://www.flames-statistics.eu/events/flames-annual-meeting-2017
+    location: FLAMES Annual Meeting 2017, KU Leuven
     institute: Research Institute for Nature and Forest (INBO)
     theme: inbo
     cover: "Image00012.png"
@@ -13,6 +13,9 @@ output:
     cover_hoffset: "-30mm"
     lang: english
     toc: FALSE
+    fontsize: 12pt
+    slide_level: 3
+  beamer_presentation: default
 ---
 
 ```{r include = FALSE}
@@ -39,59 +42,72 @@ wo <- c(BMK = 8, Data = 8, ICT = 6, Lab = 10, Bib = 8)
 science <- staff - admin - sum(wo) - management
 ```
 
-# INBO
+# Who are we?
 
-## INBO
 
-- Instituut voor Natuur- en Bosonderzoek / Research Institute for Nature and Forest
-- Flemish research and knowledge centre for nature and its sustainable management and use
-- conducts research and supplies knowledge to policy makers and stakeholders
-- supports
-    - agencies of Flemish government related with countryside or nature within urban areas
-    - organisations involved in nature conservation, forestry, agriculture, hunting and fishery
+### Instituut voor Natuur- en Bosonderzoek (INBO)
 
-## Data collection and provision
+> - Research Institute for Nature and Forest
+> - Flemish government
+> - research and knowledge center
+> - topics: nature conservation, forestry, hunting
+> - target audience: **policy makers** and stakeholders
+> - provides data for **international reporting**
+> - part of international research networks: LTER, LifeWatch, ALTER-net, ...
 
-- INBO collects and provides data for international reporting
-- Participates in (inter)national research networks
-    - [LTER](https://lternet.edu): the Long Term Ecological Research network
-    - [LifeWatch](http://www.lifewatch.eu): e-Science and Technology European Infrastructure for Biodiversity and Ecosystem Research 
-    - [ALTER-Net](http://www.alter-net.info): A Long-Term Biodiversity, Ecosystem and Awareness Research Network
-    - ...
+### 14 teams scientific staff (`r science` members)
 
-## Organigram
+![](KLEURORGANIGRAM_1.png)\ 
 
-![](KLEURORGANIGRAM_1.png)
+### 5 teams in support of scientific staff (`r sum(wo)` members)
 
-## Organigram
+![](KLEURORGANIGRAM_2.png)\ 
 
-![](KLEURORGANIGRAM_2.png)
+### 3 administrative teams (`r admin` members)
 
-## Organigram
+![](KLEURORGANIGRAM_3.png)\ 
 
-![](KLEURORGANIGRAM_3.png)
+### 1 management team (`r management` members)
 
-## Organigram
-
-![](KLEURORGANIGRAM_def.png)
-
-## Staff
-
-- `r staff` staff
-    - `r science` scientific staff (scientists + technicians)
-    - `r sum(wo)` support for scientific staff
-    - `r admin` administrative staff
-    - `r management` management
-- 5 specialised teams dedicated to support the scientific staff
-    1. Biometry, Methodology & Quality assurance (`r wo["BMK"]`)
-    1. Open data & open research (`r wo["Data"]`)
-    1. Laboratory  (`r wo["Lab"]`)
-    1. IT operations & development  (`r wo["ICT"]`)
-    1. Library  (`r wo["Bib"]`)
+![](KLEURORGANIGRAM_def.png)\ 
 
 # Biometry, Methodology & Quality assurance
 
-## Data validation through statistical modelling
+## Statistical support
+
+### Provide tools to improve open and reproducible statistical analysis
+
+> - R
+> - scripted analysis
+> - version control
+> - dynamic documents
+> - corporate identity styles for graphics and dynamic documents
+
+### Improve statistical skills of scientific staff
+
+![](20150628_0386.jpg)\ 
+
+## Methodological support
+
+### Partner during the entire life cycle of research
+
+> - Refine hypotheses
+> - Experimental design
+> - Statistical analysis
+> - Report results
+
+### Acquisition, development and maintainance of methodologies
+
+> - Concept for setting up long term monitoring
+> - Field protocols
+> - Novel statistical techniques
+> - Automation of recurring analyses
+> - Traceability of analyses
+> - Recommended suite of software and tools  
+
+## Statistical expertise
+
+### Data validation through statistical modelling
 
 ```{r}
 dataset <- read.csv("tree.csv") %>%
@@ -125,8 +141,15 @@ dataset %>%
   facet_wrap(~location) +
   xlab("Circumference at 130 cm (cm)") +
   ylab("Tree height (m)") +
-  scale_colour_manual("Anomaly", values = c("FALSE" = vl.grey3, "TRUE" = vl.darkred))
+  scale_colour_manual(
+    "Anomaly", 
+    values = c("FALSE" = inbo.steun.geelgroen, "TRUE" = inbo.hoofd)
+  )
 ```
+
+### Distance based estimates of vegetation cover
+
+![](vegetation.jpg)\ 
 
 # Open data & open research
 
