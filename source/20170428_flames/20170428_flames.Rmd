@@ -89,6 +89,12 @@ science <- staff - admin - sum(wo) - management
 
 ## Methodological support
 
+###
+
+#### Sir Ronald Aylmer Fisher
+
+To call in the statistician after the experiment is done may be no more than asking him to perform a post-mortem examination: he may be able to say what the experiment died of.
+
 ### Partner during the entire life cycle of research
 
 > - Refine hypotheses
@@ -106,6 +112,12 @@ science <- staff - admin - sum(wo) - management
 > - Recommended suite of software and tools  
 
 ## Statistical expertise
+
+###
+
+#### George E. P. Box
+
+All models are wrong, but some are useful.
 
 ### Data validation through statistical modelling
 
@@ -167,9 +179,9 @@ dataset %>%
 
 ###
 
-#### Sir Ronald Aylmer Fisher
+#### John Tukey
 
-To call in the statistician after the experiment is done may be no more than asking him to perform a post-mortem examination: he may be able to say what the experiment died of.
+The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.
 
 ### 5 stages of preparing long term monitoring
 
