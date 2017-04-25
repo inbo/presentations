@@ -29,7 +29,7 @@ library(lme4)
 library(dplyr)
 library(ggplot2)
 library(INBOtheme)
-theme_set(theme_inbo2015(6, transparent = TRUE))
+theme_set(theme_inbo2015(6))
 update_geom_defaults("point", list(size = 0.5))
 update_geom_defaults("line", list(size = 0.2))
 ```
@@ -121,7 +121,7 @@ All models are wrong, but some are useful.
 
 ### Data validation through statistical modelling
 
-```{r}
+```{r tree}
 dataset <- read.csv("tree.csv") %>%
   mutate(lc130 = log(c130 / 100))
 model <- lmer(
@@ -186,6 +186,7 @@ The combination of some data and an aching desire for an answer does not ensure 
 ### 5 stages of preparing long term monitoring
 
 ```{r guidebook}
+theme_set(theme_inbo2015(6, transparent = TRUE))
 z <- 0.6
 texts <- data.frame(
   phase = c(
@@ -289,7 +290,7 @@ ggplot(shapes, aes(x = x, y = y)) +
 
 ### Focus on the relevant questions
 
-```{r}
+```{r guidebook0}
 shapes %>%
   mutate(background = phase == 0) %>%
   ggplot(aes(x = x, y = y)) +
@@ -318,7 +319,7 @@ shapes %>%
 
 ### Prioritise the questions
 
-```{r}
+```{r guidebook1}
 shapes %>%
   mutate(background = phase == 1) %>%
   ggplot(aes(x = x, y = y)) +
@@ -347,7 +348,7 @@ shapes %>%
 
 ### Scenarios based on power and cost 
 
-```{r}
+```{r guidebook2}
 shapes %>%
   mutate(background = phase == 2) %>%
   ggplot(aes(x = x, y = y)) +
@@ -376,7 +377,7 @@ shapes %>%
 
 ### From raw data to final results \vphantom{y}
 
-```{r}
+```{r guidebook3}
 shapes %>%
   mutate(background = phase == 3) %>%
   ggplot(aes(x = x, y = y)) +
@@ -405,7 +406,7 @@ shapes %>%
 
 ### What to communicate \vphantom{y}
 
-```{r}
+```{r guidebook4}
 shapes %>%
   mutate(background = phase == 4) %>%
   ggplot(aes(x = x, y = y)) +
@@ -434,7 +435,7 @@ shapes %>%
 
 ### We're almost ready to rock'n roll \vphantom{y}
 
-```{r}
+```{r guidebook5}
 shapes %>%
   mutate(background = phase == 5) %>%
   ggplot(aes(x = x, y = y)) +
