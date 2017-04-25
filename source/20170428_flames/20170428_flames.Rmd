@@ -57,19 +57,19 @@ science <- staff - admin - sum(wo) - management
 
 ### 14 teams scientific staff (`r science` members)
 
-![](KLEURORGANIGRAM_1.png)\ 
+![](KLEURORGANIGRAM_1.png)
 
 ### 5 teams in support of scientific staff (`r sum(wo)` members)
 
-![](KLEURORGANIGRAM_2.png)\ 
+![](KLEURORGANIGRAM_2.png)
 
 ### 3 administrative teams (`r admin` members)
 
-![](KLEURORGANIGRAM_3.png)\ 
+![](KLEURORGANIGRAM_3.png)
 
 ### 1 management team (`r management` members)
 
-![](KLEURORGANIGRAM_def.png)\ 
+![](KLEURORGANIGRAM_def.png)
 
 # Biometry, Methodology & Quality assurance
 
@@ -447,3 +447,4 @@ shapes %>%
     panel.background = element_blank(),
     panel.grid = element_blank()
   )
+```
