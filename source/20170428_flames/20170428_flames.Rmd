@@ -1,5 +1,5 @@
 ---
-title: "Supporting scientific research at the INBO"
+title: "Supporting scientific research at INBO"
 author: "D. Brosens, P. Desmet, D. Du Seuil, I. Jansen, E. Lommelen, J. Loos, T. Milotic, T. Onkelinx, P. Quataert, F. Piesschaert, H. Van Calster, T. Van Daele, F. Vanderhaeghe, G. Van Spaendonck, S. Van Hoey, P. Verschelde, T. Westra, C. Wils"
 date: "April 28, 2017"
 output:
@@ -102,8 +102,9 @@ science <- staff - admin - sum(wo) - management
 > - Field protocols
 > - Novel statistical techniques
 > - Automation of recurring analyses
-> - Traceablity of analyses
-> - Recommended suite of software and tools
+> - Traceability of analyses
+> - Recommended suite of software and tools  
+    - Wat bedoel je hier juist mee?
 
 ## Statistical expertise
 
