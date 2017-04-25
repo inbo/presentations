@@ -104,7 +104,6 @@ science <- staff - admin - sum(wo) - management
 > - Automation of recurring analyses
 > - Traceability of analyses
 > - Recommended suite of software and tools  
-    - Wat bedoel je hier juist mee?
 
 ## Statistical expertise
 
