@@ -29,7 +29,7 @@ library(lme4)
 library(dplyr)
 library(ggplot2)
 library(INBOtheme)
-theme_set(theme_inbo2015(6))
+theme_set(theme_inbo2015(6, transparent = TRUE))
 update_geom_defaults("point", list(size = 0.5))
 update_geom_defaults("line", list(size = 0.2))
 ```
@@ -154,3 +154,118 @@ dataset %>%
 # Open data & open research
 
 # Vision on transparant policy supporting research
+
+### Rome wasn't built in a day
+
+> - Gradual change is key for success
+> - Focus on early adopters and early majority
+> - stimulation and support is vital
+> - new procedures should lower the burden in the long run
+> - allow for a long transition period before enforcing change
+
+## Designing and evaluating long term monitoring
+
+### Guidebook: 5 stages of preparing long term monitoring
+
+```{r guidebook}
+z <- 0.6
+texts <- data.frame(
+  phase = c(
+"vague
+information
+requirements", 
+"Phase I
+supply and demand", 
+"Phase II
+design
+data collection", 
+"Phase III
+design
+data management
+data analysis", 
+"Phase IV
+design
+reporting
+communication", 
+"Phase V
+implementation"
+    ),
+  x = c(-1.5, -z, 0,  z,  0, 1.5),
+  y = c(   0,  0, z,  0, -z, 0)
+)
+shapes <- bind_rows(
+  expand.grid(
+    phase = 1:4,
+    x = 0,
+    y = 0
+  ),
+  expand.grid(
+    phase = 1:4,
+    angle = seq(-0.5, 0.5, length = 41) * pi / 3
+  ) %>%
+  mutate(
+    angle = angle + phase * pi / 2,
+    x = cos(angle),
+    y = sin(angle)
+  ),
+  expand.grid(
+    phase = 1:4,
+    x = 0,
+    y = 0
+  ),
+  data.frame(
+    phase = 0,
+    x = c(-1.2, -1.2, -1.8, -1.8, -1.2),
+    y = c(-0.3, 0.3, 0.3, -0.3, -0.3)
+  ),
+  data.frame(
+    phase = 5,
+    x = c(1.2, 1.2, 1.8, 1.8, 1.2),
+    y = c(-0.3, 0.3, 0.3, -0.3, -0.3)
+  )
+)
+rad <- 0.8
+arrows <- data.frame(
+  phase = 1:4
+) %>%
+  mutate(
+    start = 0.5 * pi / 3 + (phase - 1) * pi / 2,
+    end = -0.5 * pi / 3 + phase * pi / 2,
+    x = cos(start) * rad,
+    y = sin(start) * rad,
+    xend = cos(end) * rad,
+    yend = sin(end) * rad
+  )
+triple_arrows <- expand.grid(
+  place = c(-1, 1),
+  extra = c(-1, 0, 1)
+) %>%
+  mutate(
+    x = pmin(place, place * 1.2),
+    xend = pmax(place, place * 1.2),
+    y = extra * 0.1,
+    yend = extra * 0.1
+  )
+ggplot(shapes, aes(x = x, y = y)) +
+  geom_path(aes(group = phase)) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
