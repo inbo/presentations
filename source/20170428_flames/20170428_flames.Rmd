@@ -194,7 +194,8 @@ The combination of some data and an aching desire for an answer does not ensure 
 theme_set(theme_inbo(6, transparent = TRUE))
 z <- 0.6
 texts <- data.frame(
-  phase = c(
+  phase = 0:5,
+  label = c(
 "vague
 information
 requirements", 
@@ -282,7 +283,7 @@ ggplot(shapes, aes(x = x, y = y)) +
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = phase), size = 2) +
+  geom_text(data = texts, aes(label = label), size = 2) +
   coord_fixed() + 
   theme(
     axis.title = element_blank(),
@@ -310,7 +311,7 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = phase), size = 2) +
+  geom_text(data = texts, aes(label = label), size = 2) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme(
@@ -339,7 +340,8 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = phase), size = 2) +
+  geom_text(data = texts, aes(label = label, colour = phase == 1), size = 2, show.legend = FALSE) +
+  scale_colour_manual(values = c("TRUE" = inbo.hoofd, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme(
@@ -368,7 +370,8 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = phase), size = 2) +
+  geom_text(data = texts, aes(label = label, colour = phase == 2), size = 2, show.legend = FALSE) +
+  scale_colour_manual(values = c("TRUE" = "white", "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme(
@@ -397,7 +400,8 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = phase), size = 2) +
+  geom_text(data = texts, aes(label = label, colour = phase == 3), size = 2, show.legend = FALSE) +
+  scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme(
@@ -426,7 +430,8 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = phase), size = 2) +
+  geom_text(data = texts, aes(label = label, colour = phase == 4), size = 2, show.legend = FALSE) +
+  scale_colour_manual(values = c("TRUE" = inbo.steun.donkerroos, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme(
@@ -455,7 +460,8 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = phase), size = 2) +
+  geom_text(data = texts, aes(label = label, colour = phase == 5), size = 2, show.legend = FALSE) +
+  scale_colour_manual(values = c("TRUE" = "black", "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme(
