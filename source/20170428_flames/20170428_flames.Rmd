@@ -49,11 +49,11 @@ science <- staff - admin - sum(wo) - management
 
 > - Research Institute for Nature and Forest (INBO)
 > - Flemish government
-> - research and knowledge center
-> - open data institute (since 2015)
-> - topics: nature conservation, forestry, hunting, nature and society, ecosystem services, management
-> - target audience: **policy makers** and stakeholders
-> - provides data for **international reporting** and **biodiversity research**
+> - Research and knowledge center
+> - Open data institute (since 2015)
+> - Topics: nature conservation, forestry, hunting, nature and society, ecosystem services, management
+> - Target audience: **policy makers** and stakeholders
+> - Provides data for **international reporting** and **biodiversity research**
 > - Member of international research networks: LTER, LifeWatch, ALTER-net, GBIF, ...
 
 ### 14 teams with scientific staff (`r science` members)
@@ -79,10 +79,10 @@ science <- staff - admin - sum(wo) - management
 ### Provide tools to improve open and reproducible statistical analysis
 
 > - R
-> - scripted analysis
-> - version control
-> - dynamic documents
-> - corporate identity styles for graphics and dynamic documents
+> - Scripted analysis
+> - Version control
+> - Dynamic documents
+> - Corporate identity styles for graphics and dynamic documents
 
 ### Improve statistical skills of scientific staff
 
@@ -172,9 +172,9 @@ dataset %>%
 
 > - Gradual change is key for success
 > - Focus on early adopters and early majority
-> - stimulation and support is vital
-> - new procedures should lower the burden in the long run
-> - allow for a long transition period before enforcing change
+> - Stimulation and support is vital
+> - New procedures should lower the burden in the long run
+> - Qllow for a long transition period before enforcing change
 
 ## Designing and evaluating long term monitoring
 
