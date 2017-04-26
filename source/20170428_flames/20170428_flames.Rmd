@@ -57,16 +57,16 @@ science <- staff - admin - sum(wo) - management
 
 ### Instituut voor Natuur- en Bosonderzoek (INBO)
 
-> - Research Institute for Nature and Forest
+> - Research Institute for Nature and Forest (INBO)
 > - Flemish government
-> - research and knowledge center
-> - open data institute (since 2015)
-> - topics: nature conservation, forestry, hunting, nature and society, ecosystem services, management
-> - target audience: **policy makers** and stakeholders
-> - provides data for **international reporting** and **biodiversity research**
-> - part of international research networks: LTER, LifeWatch, ALTER-net, GBIF ...
+> - Research and knowledge center
+> - Open data institute (since 2015)
+> - Topics: nature conservation, forestry, hunting, nature and society, ecosystem services, management
+> - Target audience: **policy makers** and stakeholders
+> - Provides data for **international reporting** and **biodiversity research**
+> - Member of international research networks: LTER, LifeWatch, ALTER-net, GBIF, ...
 
-### 14 teams scientific staff (`r science` members)
+### 14 teams with scientific staff (`r science` members)
 
 ![](KLEURORGANIGRAM_1.png)
 
@@ -362,15 +362,15 @@ dataset %>%
 
 # Open data & open research
 
-# Vision on transparant policy supporting research
+# Towards supporting policy based on open science
 
 ### Rome wasn't built in a day
 
 > - Gradual change is key for success
 > - Focus on early adopters and early majority
-> - stimulation and support is vital
-> - new procedures should lower the burden in the long run
-> - allow for a long transition period before enforcing change
+> - Stimulation and support is vital
+> - New procedures should lower the burden in the long run
+> - Allow for a long transition period before enforcing change
 
 ## Designing and evaluating long term monitoring
 
