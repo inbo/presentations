@@ -44,7 +44,6 @@ science <- staff - admin - sum(wo) - management
 
 # Who are we?
 
-
 ### Instituut voor Natuur- en Bosonderzoek (INBO)
 
 > - Research Institute for Nature and Forest (INBO)
@@ -201,6 +200,14 @@ dataset %>%
 > - Data processing tools
 > - GIS tools
 > - Reporting tools
+
+### Example: WUG
+
+![WUG online](wug_online.png)\ 
+
+### Example: WUG
+
+![WUG code on GitHub](wug_github.png)\ 
 
 ### Provide support
 
