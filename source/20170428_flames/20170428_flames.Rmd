@@ -34,6 +34,15 @@ library(dplyr)
 theme_set(theme_inbo(6))
 update_geom_defaults("point", list(size = 0.5))
 update_geom_defaults("line", list(size = 0.2))
+theme_blank <- function(){
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+}
 ```
 
 ```{r}
@@ -335,13 +344,7 @@ ggplot(shapes, aes(x = x, y = y)) +
   ) +
   geom_text(data = texts, aes(label = label), size = 2) +
   coord_fixed() + 
-  theme(
-    axis.title = element_blank(),
-    axis.text = element_blank(),
-    axis.ticks = element_blank(),
-    panel.background = element_blank(),
-    panel.grid = element_blank()
-  )
+  theme_blank()
 ```
 
 ### Focus on the relevant questions
@@ -364,13 +367,7 @@ shapes %>%
   geom_text(data = texts, aes(label = label), size = 2) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
-  theme(
-    axis.title = element_blank(),
-    axis.text = element_blank(),
-    axis.ticks = element_blank(),
-    panel.background = element_blank(),
-    panel.grid = element_blank()
-  )
+  theme_blank()
 ```
 
 ### Prioritise the questions
@@ -394,13 +391,7 @@ shapes %>%
   scale_colour_manual(values = c("TRUE" = inbo.hoofd, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
-  theme(
-    axis.title = element_blank(),
-    axis.text = element_blank(),
-    axis.ticks = element_blank(),
-    panel.background = element_blank(),
-    panel.grid = element_blank()
-  )
+  theme_blank()
 ```
 
 ### Scenarios based on power and cost 
@@ -424,13 +415,7 @@ shapes %>%
   scale_colour_manual(values = c("TRUE" = "white", "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
-  theme(
-    axis.title = element_blank(),
-    axis.text = element_blank(),
-    axis.ticks = element_blank(),
-    panel.background = element_blank(),
-    panel.grid = element_blank()
-  )
+  theme_blank()
 ```
 
 ### From raw data to final results \vphantom{y}
@@ -454,13 +439,7 @@ shapes %>%
   scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
-  theme(
-    axis.title = element_blank(),
-    axis.text = element_blank(),
-    axis.ticks = element_blank(),
-    panel.background = element_blank(),
-    panel.grid = element_blank()
-  )
+  theme_blank()
 ```
 
 ### What to communicate \vphantom{y}
@@ -484,13 +463,7 @@ shapes %>%
   scale_colour_manual(values = c("TRUE" = inbo.steun.donkerroos, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
-  theme(
-    axis.title = element_blank(),
-    axis.text = element_blank(),
-    axis.ticks = element_blank(),
-    panel.background = element_blank(),
-    panel.grid = element_blank()
-  )
+  theme_blank()
 ```
 
 ### We're almost ready to rock'n roll \vphantom{y}
@@ -514,11 +487,5 @@ shapes %>%
   scale_colour_manual(values = c("TRUE" = "black", "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
-  theme(
-    axis.title = element_blank(),
-    axis.text = element_blank(),
-    axis.ticks = element_blank(),
-    panel.background = element_blank(),
-    panel.grid = element_blank()
-  )
+  theme_blank()
 ```
