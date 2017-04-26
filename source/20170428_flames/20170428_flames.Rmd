@@ -50,10 +50,11 @@ science <- staff - admin - sum(wo) - management
 > - Research Institute for Nature and Forest
 > - Flemish government
 > - research and knowledge center
-> - topics: nature conservation, forestry, hunting
+> - open data institute (since 2015)
+> - topics: nature conservation, forestry, hunting, nature and society, ecosystem services, management
 > - target audience: **policy makers** and stakeholders
-> - provides data for **international reporting**
-> - part of international research networks: LTER, LifeWatch, ALTER-net, ...
+> - provides data for **international reporting** and **biodiversity research**
+> - part of international research networks: LTER, LifeWatch, ALTER-net, GBIF ...
 
 ### 14 teams scientific staff (`r science` members)
 
