@@ -29,7 +29,7 @@ library(lme4)
 library(dplyr)
 library(ggplot2)
 library(INBOtheme)
-theme_set(theme_inbo2015(6))
+theme_set(theme_inbo(6))
 update_geom_defaults("point", list(size = 0.5))
 update_geom_defaults("line", list(size = 0.2))
 ```
@@ -186,7 +186,7 @@ The combination of some data and an aching desire for an answer does not ensure 
 ### 5 stages of preparing long term monitoring
 
 ```{r guidebook}
-theme_set(theme_inbo2015(6, transparent = TRUE))
+theme_set(theme_inbo(6, transparent = TRUE))
 z <- 0.6
 texts <- data.frame(
   phase = c(
