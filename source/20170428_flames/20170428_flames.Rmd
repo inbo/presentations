@@ -29,7 +29,7 @@ library(lme4)
 library(dplyr)
 library(ggplot2)
 library(INBOtheme)
-theme_set(theme_inbo2015(6))
+theme_set(theme_inbo(6))
 update_geom_defaults("point", list(size = 0.5))
 update_geom_defaults("line", list(size = 0.2))
 ```
@@ -58,19 +58,19 @@ science <- staff - admin - sum(wo) - management
 
 ### 14 teams scientific staff (`r science` members)
 
-![](KLEURORGANIGRAM_1.png)\ 
+![](KLEURORGANIGRAM_1.png)
 
 ### 5 teams in support of scientific staff (`r sum(wo)` members)
 
-![](KLEURORGANIGRAM_2.png)\ 
+![](KLEURORGANIGRAM_2.png)
 
 ### 3 administrative teams (`r admin` members)
 
-![](KLEURORGANIGRAM_3.png)\ 
+![](KLEURORGANIGRAM_3.png)
 
 ### 1 management team (`r management` members)
 
-![](KLEURORGANIGRAM_def.png)\ 
+![](KLEURORGANIGRAM_def.png)
 
 # Biometry, Methodology & Quality assurance
 
@@ -90,6 +90,12 @@ science <- staff - admin - sum(wo) - management
 
 ## Methodological support
 
+###
+
+#### Sir Ronald Aylmer Fisher
+
+To call in the statistician after the experiment is done may be no more than asking him to perform a post-mortem examination: he may be able to say what the experiment died of.
+
 ### Partner during the entire life cycle of research
 
 > - Refine hypotheses
@@ -108,9 +114,15 @@ science <- staff - admin - sum(wo) - management
 
 ## Statistical expertise
 
+###
+
+#### George E. P. Box
+
+All models are wrong, but some are useful.
+
 ### Data validation through statistical modelling
 
-```{r}
+```{r tree}
 dataset <- read.csv("tree.csv") %>%
   mutate(lc130 = log(c130 / 100))
 model <- lmer(
@@ -155,3 +167,298 @@ dataset %>%
 # Open data & open research
 
 # Vision on transparant policy supporting research
+
+### Rome wasn't built in a day
+
+> - Gradual change is key for success
+> - Focus on early adopters and early majority
+> - stimulation and support is vital
+> - new procedures should lower the burden in the long run
+> - allow for a long transition period before enforcing change
+
+## Designing and evaluating long term monitoring
+
+###
+
+#### John Tukey
+
+The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.
+
+### 5 stages of preparing long term monitoring
+
+```{r guidebook}
+theme_set(theme_inbo(6, transparent = TRUE))
+z <- 0.6
+texts <- data.frame(
+  phase = c(
+"vague
+information
+requirements", 
+"Phase I
+supply and demand", 
+"Phase II
+design
+data collection", 
+"Phase III
+design
+data management
+data analysis", 
+"Phase IV
+design
+reporting
+communication", 
+"Phase V
+implementation"
+    ),
+  x = c(-1.5, -z, 0,  z,  0, 1.5),
+  y = c(   0,  0, z,  0, -z, 0)
+)
+shapes <- bind_rows(
+  expand.grid(
+    phase = 1:4,
+    x = 0,
+    y = 0
+  ),
+  expand.grid(
+    phase = 1:4,
+    angle = seq(-0.5, 0.5, length = 41) * pi / 3 + pi
+  ) %>%
+  mutate(
+    angle = angle - (phase - 1) * pi / 2,
+    x = cos(angle),
+    y = sin(angle)
+  ),
+  expand.grid(
+    phase = 1:4,
+    x = 0,
+    y = 0
+  ),
+  data.frame(
+    phase = 0,
+    x = c(-1.2, -1.2, -1.8, -1.8, -1.2),
+    y = c(-0.3, 0.3, 0.3, -0.3, -0.3)
+  ),
+  data.frame(
+    phase = 5,
+    x = c(1.2, 1.2, 1.8, 1.8, 1.2),
+    y = c(-0.3, 0.3, 0.3, -0.3, -0.3)
+  )
+)
+rad <- 0.8
+arrows <- data.frame(
+  phase = 1:4
+) %>%
+  mutate(
+    start = 0.5 * pi / 3 + (phase - 1) * pi / 2,
+    end = -0.5 * pi / 3 + phase * pi / 2,
+    x = cos(start) * rad,
+    y = sin(start) * rad,
+    xend = cos(end) * rad,
+    yend = sin(end) * rad
+  )
+triple_arrows <- expand.grid(
+  place = c(-1, 1),
+  extra = c(-1, 0, 1)
+) %>%
+  mutate(
+    x = pmin(place, place * 1.2),
+    xend = pmax(place, place * 1.2),
+    y = extra * 0.1,
+    yend = extra * 0.1
+  )
+ggplot(shapes, aes(x = x, y = y)) +
+  geom_path(aes(group = phase)) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
+### Focus on the relevant questions
+
+```{r guidebook0}
+shapes %>%
+  mutate(background = phase == 0) %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
+### Prioritise the questions
+
+```{r guidebook1}
+shapes %>%
+  mutate(background = phase == 1) %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
+### Scenarios based on power and cost 
+
+```{r guidebook2}
+shapes %>%
+  mutate(background = phase == 2) %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
+### From raw data to final results \vphantom{y}
+
+```{r guidebook3}
+shapes %>%
+  mutate(background = phase == 3) %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
+### What to communicate \vphantom{y}
+
+```{r guidebook4}
+shapes %>%
+  mutate(background = phase == 4) %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
+### We're almost ready to rock'n roll \vphantom{y}
+
+```{r guidebook5}
+shapes %>%
+  mutate(background = phase == 5) %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
