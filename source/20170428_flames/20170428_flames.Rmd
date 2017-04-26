@@ -76,7 +76,7 @@ science <- staff - admin - sum(wo) - management
 
 ## Statistical support
 
-### Provide tools to improve open and reproducible statistical analysis
+### Provide tools to improve reproducible statistical analysis
 
 > - R
 > - Scripted analysis
@@ -166,7 +166,7 @@ dataset %>%
 
 # Open data & open research
 
-# Vision on transparant policy supporting research
+# Towards supporting policy based on open science
 
 ### Rome wasn't built in a day
 
