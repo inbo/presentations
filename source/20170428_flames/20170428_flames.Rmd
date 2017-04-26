@@ -82,6 +82,12 @@ science <- staff - admin - sum(wo) - management
 
 ![](KLEURORGANIGRAM_def.png)
 
+### 
+
+#### Peter Diggle
+
+**Informatics** seeks to maximize the **_utility_** of data, whereas **statistics** seeks to minimize the uncertainty that is associated with the **_interpretation_** of data.
+
 # Biometry, Methodology & Quality assurance
 
 ## Methodological support
