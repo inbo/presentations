@@ -1,5 +1,5 @@
 ---
-title: "Supporting scientific research at INBO"
+title: "Supporting scientific research at the INBO"
 author: "D. Brosens, P. Desmet, D. Du Seuil, I. Jansen, E. Lommelen, J. Loos, T. Milotic, T. Onkelinx, P. Quataert, F. Piesschaert, H. Van Calster, T. Van Daele, F. Vanderhaeghe, G. Van Spaendonck, S. Van Hoey, P. Verschelde, T. Westra, C. Wils"
 date: "April 28, 2017"
 output:
@@ -47,16 +47,16 @@ science <- staff - admin - sum(wo) - management
 
 ### Instituut voor Natuur- en Bosonderzoek (INBO)
 
-> - Research Institute for Nature and Forest
+> - Research Institute for Nature and Forest (INBO)
 > - Flemish government
 > - research and knowledge center
 > - open data institute (since 2015)
 > - topics: nature conservation, forestry, hunting, nature and society, ecosystem services, management
 > - target audience: **policy makers** and stakeholders
 > - provides data for **international reporting** and **biodiversity research**
-> - part of international research networks: LTER, LifeWatch, ALTER-net, GBIF ...
+> - Member of international research networks: LTER, LifeWatch, ALTER-net, GBIF, ...
 
-### 14 teams scientific staff (`r science` members)
+### 14 teams with scientific staff (`r science` members)
 
 ![](KLEURORGANIGRAM_1.png)
 
