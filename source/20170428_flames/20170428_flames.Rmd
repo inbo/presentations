@@ -120,6 +120,10 @@ To call in the statistician after the experiment is done may be no more than ask
 
 All models are wrong, but some are useful.
 
+### Power calculation
+
+![](vanermen2015.png)
+
 ### Data validation through statistical modelling
 
 ```{r tree}
