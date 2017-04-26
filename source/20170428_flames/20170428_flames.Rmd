@@ -216,6 +216,103 @@ dataset %>%
 > - Training
 > - Ad hoc support
 
+## Open data
+
+### INBO has an open data policy
+
+![Open data policy](open_data_policy.png)\ 
+
+### 
+
+But what does that mean and how did we get there?
+
+### 2009
+
+Strategic goal to manage and disclose (biodiversity) data
+
+### 2011: first dataset on GBIF
+
+*image of Florabank on GBIF*
+
+### Global Biodiversity Information Facility
+
+*image of GBIF portal*
+
+### Data publication process
+
+> - Format data to Darwin Core standard
+> - Document data with metadata (also standardized)
+> - Publish dataset online
+> - Register dataset with GBIF
+> - (Re)publish versioned updates or corrections
+
+### 2012: first data paper
+
+*image of Florabank paper
+
+### year: BWK publicly available
+
+*image of BWK*
+
+### 2012: start of LifeWatch project
+
+*image of bird tracking data*
+
+### 2013: data license
+
+*license consultation GBIF*
+
+### 2014: Bouchout declaration
+
+*image of declaration*
+
+### 2015: INBO open data policy
+
+![Open data policy](open_data_policy.png)\ 
+
+### What are open data?
+
+- ...
+
+### Why open data: governmental context
+
+- ...
+
+### Why open data: research context
+
+- ...
+
+### Guidelines of the open data policy
+
+1. All scientific data for which the (EV) INBO is (co-)owner are covered by this policy and can be published as open data, excluding legal exceptions.
+2. Data are eligible for publication at the earliest 12 months after collecting.
+3. Raw data will be published.
+4. Result data associated with a scientific article, report, or advice will be released with the publication.
+5. Data are published as open data, as defined by the Open Definition, under the Creative Commons Zero waiver.
+6. Published datasets reference the INBO norms for data use.
+7. Published data are sufficiently documented with metadata.
+8. All upcoming research projects require a data management plan (DMP).
+9. Researchers apply the open data policy.
+10. The INBO Information & Data Center supports researchers in the application of the open data policy.
+
+### INBO on GBIF now
+
+*Image of INBO on GBIF*
+
+### Use of data
+
+*Data use chart*
+
+### Open documentation
+
+*Image of data-publication repo*
+
+### Challenges
+
+- International platforms/standards for abiotic data
+- Publish data associated with scientific publications and reports
+- Automate workflows
+- Think about data publication at the start of the project
 
 # Towards supporting policy based on open science
 
