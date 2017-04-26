@@ -166,6 +166,27 @@ dataset %>%
 
 # Open data & open research
 
+###
+
+*image of BWK monitoring*
+
+###
+
+*image of seabirds at sea monitoring*
+
+###
+
+*image of bird with tracker*
+
+###
+
+*image of WATINA monitoring*
+
+###
+
+*image of lab analysis*
+
+
 # Towards supporting policy based on open science
 
 ### Rome wasn't built in a day
