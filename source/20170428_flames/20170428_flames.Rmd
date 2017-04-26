@@ -29,6 +29,8 @@ library(lme4)
 library(dplyr)
 library(ggplot2)
 library(INBOtheme)
+library(wordcloud)
+library(dplyr)
 theme_set(theme_inbo(6))
 update_geom_defaults("point", list(size = 0.5))
 update_geom_defaults("line", list(size = 0.2))
@@ -84,6 +86,55 @@ science <- staff - admin - sum(wo) - management
 > - dynamic documents
 > - corporate identity styles for graphics and dynamic documents
 
+### Freeware open source software
+
+```{r wordcloud}
+set.seed(123)
+cloud <- frame_data(
+  ~words, ~freq,
+  "R", 50,
+  "RStudio", 25,
+  "Markdown", 25,
+  "GitHub", 25,
+  "ggplot2", 10,
+  "dplyr", 10,
+  "tidyr", 10,
+  "DBI", 3,
+  "sp", 3,
+  "rgeos", 3,
+  "rgdal", 3,
+  "INBOmd", 5,
+  "INBOtheme", 5,
+  "multimput", 5,
+  "devtools", 5,
+  "INLA", 5,
+  "lme4", 5,
+  "vegan", 5,
+  "ggmap", 3,
+  "leaflet", 3,
+  "googlesheets", 3,
+  "gstat", 3,
+  "nlme", 5, 
+  "lintr", 3,
+  "covr", 3,
+  "lubridate", 3,
+  "mgcv", 5,
+  "multcomp", 3,
+  "knitr", 5,
+  "raster", 3,
+  "readr", 5,
+  "readxl", 5,
+  "testthat", 3
+)
+wordcloud(
+  words = cloud$words,
+  freq = cloud$freq,
+  random.color = TRUE,
+  colors = inbo.2015.colours(9)
+)
+```
+
+
 ### Improve statistical skills of scientific staff
 
 ![](20150628_0386.jpg)\ 
@@ -110,7 +161,6 @@ To call in the statistician after the experiment is done may be no more than ask
 > - Novel statistical techniques
 > - Automation of recurring analyses
 > - Traceability of analyses
-> - Recommended suite of software and tools  
 
 ## Statistical expertise
 
