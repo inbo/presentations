@@ -472,10 +472,6 @@ wordcloud(
 
 All models are wrong, but some are useful.
 
-### Power calculation
-
-![](vanermen2015.png)
-
 ### Data validation through statistical modelling
 
 ```{r tree}
@@ -515,6 +511,10 @@ dataset %>%
     values = c("FALSE" = inbo.steun.geelgroen, "TRUE" = inbo.hoofd)
   )
 ```
+
+### Power calculation
+
+![](vanermen2015.png)
 
 ### Methods that strike a good balance between observer error, sampling error and costs
 
