@@ -358,9 +358,7 @@ dataset %>%
 
 ### Methods that strike a good balance between observer error, sampling error and costs
 
-> - Distance based estimates of vegetation cover
-
-![](vegetation.jpg)\ 
+![Estimating vegetation cover](point_distance.png)
 
 # Open data & open research
 
