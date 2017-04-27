@@ -185,17 +185,17 @@ dataset %>%
 
 ### Build and maintain data infrastructure
 
-> - Manage major data systems
-> - Setup data warehouses for uniform data access
-> - Setup GIS services
-> - Design data models for new systems
-> - Coordinate development of new data collection tools
+- Manage major data systems
+- Setup data warehouses for uniform data access
+- Setup GIS services
+- Design data models for new systems
+- Coordinate development of new data collection tools
 
 ### Provide research software
 
-> - Data processing tools
-> - GIS tools
-> - Reporting tools
+- Data processing tools
+- GIS tools
+- Reporting tools
 
 ### Example: WUG
 
@@ -207,10 +207,10 @@ dataset %>%
 
 ### Provide support
 
-> - Documentation
-> - Tutorials
-> - Training
-> - Ad hoc support
+- Documentation
+- Tutorials
+- Training
+- Ad hoc support
 
 ## Open data
 
