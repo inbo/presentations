@@ -301,23 +301,33 @@ Strategic goal to manage and disclose (biodiversity) data
 
 ### Published data
 
-```r
-published_years = c(2011, 2012, 2013, 2014, 2015, 2016)
-published_datasets = c(2, 6, 13, 17, 20, 27)
-published_occurrences = c(3325224, 3478955, 4009432, 5191428, 7682739, 10203633)
+```{r published}
+data.frame(
+  published_years = c(2011, 2012, 2013, 2014, 2015, 2016),
+  published_datasets = c(2, 6, 13, 17, 20, 27),
+  published_occurrences = c(3325224, 3478955, 4009432, 5191428, 7682739, 10203633) / 1e6
+) %>%
+  ggplot(aes(x = published_datasets, y = published_occurrences, label = published_years)) +
+  geom_point() +
+  geom_text(vjust = -.1, hjust = -.1, size = 2) +
+  scale_x_continuous("Number of published datasets", limits = c(0, NA), expand = c(0.07, 0)) +
+  scale_y_continuous("Number of published occurrences (in millions)", limits = c(0, NA))
 ```
-
-*Bar chart with years on x axis, datasets on y1, occurrences on y2*
 
 ### Use of data
 
-```r
-downloaded_years = c(2013, 2014, 2015, 2016)
-downloaded_downloads = c(2091, 11206, 15382, 17974)
-downloaded_occurrences = c(504549089, 1603418177, 2764760091, 4178367077)
+```{r downloaded}
+data.frame(
+  downloaded_years = c(2013, 2014, 2015, 2016),
+  downloaded_downloads = c(2091, 11206, 15382, 17974) / 1e3,
+  downloaded_occurrences = c(504549089, 1603418177, 2764760091, 4178367077) / 1e9
+) %>%
+  ggplot(aes(x = downloaded_downloads, y = downloaded_occurrences, label = downloaded_years)) +
+  geom_point() +
+  geom_text(vjust = -.1, hjust = -.1, size = 2) +
+  scale_x_continuous("Number of downloads (in thousands)", limits = c(0, NA), expand = c(0.07, 0)) +
+  scale_y_continuous("Number of downloaded occurrences (in billions)", limits = c(0, NA))
 ```
-
-*Bar chart with years on x axis, downloads on y1, occurrences on y2*
 
 ### Flemish open data portal
 
