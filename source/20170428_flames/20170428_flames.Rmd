@@ -214,7 +214,7 @@ dataset %>%
 
 ## Open data
 
-### INBO has an open data policy
+### INBO is an open data institute
 
 ![Open data policy](open_data_policy.png)\ 
 
@@ -251,7 +251,7 @@ Open data and content can be **freely used, modified, and shared** by **anyone**
 
 Strategic goal to manage and disclose (biodiversity) data
 
-### 2011: first dataset on GBIF
+### 2011: First dataset published on GBIF
 
 ![http://www.gbif.org/dataset/271c444f-f8d8-4986-b748-e7367755c0c1](gbif_florabank.png)\ 
 
@@ -261,25 +261,25 @@ Strategic goal to manage and disclose (biodiversity) data
 
 ### Data publication process
 
-> - Format data to international Darwin Core standard
-> - Document data with metadata (also standardized)
-> - Publish dataset online
-> - Register dataset with GBIF
-> - (Re)publish versioned updates or corrections
+- Format data to international Darwin Core standard
+- Document data with metadata (also standardized)
+- Publish dataset online
+- Register dataset with GBIF
+- (Re)publish versioned updates or corrections
 
-### 2012: first data paper
+### 2012: First data paper
 
 ![https://doi.org/10.3897/phytokeys.12.2849](data_paper_florabank.png)\ 
 
-### 2012: start of the LifeWatch project
+### 2012: Start of the LifeWatch project
 
 ![Gull tracking data in breeding areas](lifewatch_gulls_map.png)\ 
 
-### 2013: choose a data license
+### 2013: Choose a license
 
 ![Creative Commons zero waiver](cc0.png)
 
-### 2013: license consulation on GBIF
+### 2013: GBIF license consultation
 
 ![GBIF license consultation](gbif_license_consultation.png)\ 
 
