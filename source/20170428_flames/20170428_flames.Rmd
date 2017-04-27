@@ -118,14 +118,6 @@ The research institute for Nature and Forest (INBO) is the Flemish research and 
 - GIS tools
 - Reporting tools
 
-### Example: WUG
-
-![WUG online](wug_online.png)\ 
-
-### Example: WUG
-
-![WUG code on GitHub](wug_github.png)\ 
-
 ### Provide support
 
 - Documentation
