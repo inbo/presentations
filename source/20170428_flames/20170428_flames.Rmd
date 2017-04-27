@@ -54,7 +54,6 @@ science <- staff - admin - sum(wo) - management
 
 # Who are we?
 
-
 ### Instituut voor Natuur- en Bosonderzoek (INBO)
 
 > - Research Institute for Nature and Forest (INBO)
@@ -366,9 +365,200 @@ dataset %>%
 
 ![Estimating vegetation cover](point_distance.png)
 
-# Open data & open research
+# Open data & open science
 
-# Towards supporting policy based on open science
+###
+
+![Human species monitoring](slide5.jpg)\ 
+
+###
+
+![Machine species monitoring](oo_73828.jpg)\ 
+
+###
+
+![Abiotic monitoring](BRGP036A_2.jpg)\ 
+
+###
+
+![Lab analysis](slide7.jpg)\ 
+
+## Support scientific staff in data life cycle
+
+### Build and maintain data infrastructure
+
+- Manage major data systems
+- Setup data warehouses for uniform data access
+- Setup GIS services
+- Design data models for new systems
+- Coordinate development of new data collection tools
+
+### Provide research software
+
+- Data processing tools
+- GIS tools
+- Reporting tools
+
+### Example: WUG
+
+![WUG online](wug_online.png)\ 
+
+### Example: WUG
+
+![WUG code on GitHub](wug_github.png)\ 
+
+### Provide support
+
+- Documentation
+- Tutorials
+- Training
+- Ad hoc support
+
+## Open data
+
+### INBO is an open data institute
+
+![Open data policy](open_data_policy.png)\ 
+
+### 
+
+But what does that mean and how did we get there?
+
+#### The Open Definition
+
+Open data and content can be **freely used, modified, and shared** by **anyone** for **any purpose**.
+
+### Considered open if following requirements are met
+
+> 1. With open license or status
+> 2. Accessible
+> 3. Machine readable
+> 4. In open format
+
+### Why open data for research?
+
+> - Increase discoverability
+> - Increase potential use
+> - Increase collaborations
+> - Transparent science
+
+### Move towards open data
+
+> - EC: Directive on the re-use of public sector information (2003/98/EG & 2013/37/EU)
+> - Flemish government: open data should become the norm for the Flemish government (_2011 conceptnota open data_)
+> - Funding agencies: e.g. Horizon 2020
+> - Research journals: deposit data in an open respository
+
+### 2009
+
+Strategic goal to manage and disclose (biodiversity) data
+
+### 2011: First dataset published on GBIF
+
+![http://www.gbif.org/dataset/271c444f-f8d8-4986-b748-e7367755c0c1](gbif_florabank.png)\ 
+
+### Global Biodiversity Information Facility (GBIF)
+
+![http://www.gbif.org](gbif_homepage.png)\ 
+
+### Data publication process
+
+- Format data to international Darwin Core standard
+- Document data with metadata (also standardized)
+- Publish dataset online
+- Register dataset with GBIF
+- (Re)publish versioned updates or corrections
+
+### 2012: First data paper
+
+![https://doi.org/10.3897/phytokeys.12.2849](data_paper_florabank.png)\ 
+
+### 2012: Start of the LifeWatch project
+
+![Gull tracking data in breeding areas](lifewatch_gulls_map.png)\ 
+
+### 2013: Choose a license
+
+![Creative Commons zero waiver](cc0.png)
+
+### 2013: GBIF license consultation
+
+![GBIF license consultation](gbif_license_consultation.png)\ 
+
+### 2014: Bouchout declaration
+
+![Bouchout declaration](bouchout_declaration.png)\ 
+
+### 2014: Biological Valuation Map (BVM) as open data
+
+![http://www.geopunt.be/catalogus/datasetfolder/4/48b805e2-3aa1-4d34-b49b-1802e85c4e0c/1acb23e7-09b0-4d92-a0a1-61e4c9ece79b](geopunt_bwk_2014.png)\ 
+
+### 2015: INBO open data policy
+
+![Open data policy](open_data_policy.png)\ 
+
+### Guidelines of the open data policy
+
+> 1. Policy applies to data we own & is bound by legal exceptions
+> 2. Data is eligible for publication 12 months after collecting
+> 3. Aim to publish collected data (from major data systems)
+> 4. Aim to publish result data (associated with publications)
+> 5. Publish as open data (defined by Open Definition)
+> 6. Publish under CC0 waiver
+> 7. Encourage proper use with INBO norms for data use
+> 8. Document data with metadata
+> 9. Start using data management plans (DMP)
+
+### INBO on GBIF
+
+![http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b](gbif_inbo.png)\ 
+
+### Published data
+
+```{r published}
+data.frame(
+  published_years = c(2011, 2012, 2013, 2014, 2015, 2016),
+  published_datasets = c(2, 6, 13, 17, 20, 27),
+  published_occurrences = c(3325224, 3478955, 4009432, 5191428, 7682739, 10203633) / 1e6
+) %>%
+  ggplot(aes(x = published_datasets, y = published_occurrences, label = published_years)) +
+  geom_point() +
+  geom_text(vjust = -.1, hjust = -.1, size = 2) +
+  scale_x_continuous("Number of published datasets", limits = c(0, NA), expand = c(0.07, 0)) +
+  scale_y_continuous("Number of published occurrences (in millions)", limits = c(0, NA))
+```
+
+### Use of data
+
+```{r downloaded}
+data.frame(
+  downloaded_years = c(2013, 2014, 2015, 2016),
+  downloaded_downloads = c(2091, 11206, 15382, 17974) / 1e3,
+  downloaded_occurrences = c(504549089, 1603418177, 2764760091, 4178367077) / 1e9
+) %>%
+  ggplot(aes(x = downloaded_downloads, y = downloaded_occurrences, label = downloaded_years)) +
+  geom_point() +
+  geom_text(vjust = -.1, hjust = -.1, size = 2) +
+  scale_x_continuous("Number of downloads (in thousands)", limits = c(0, NA), expand = c(0.07, 0)) +
+  scale_y_continuous("Number of downloaded occurrences (in billions)", limits = c(0, NA))
+```
+
+### Flemish open data portal
+
+![http://opendata.vlaanderen.be/organization/inbo](vodp_inbo.png)\ 
+
+### Open documentation on GitHub
+
+![Data publication repository](github_bird_tracking.png)\ 
+
+### Challenges
+
+- International platforms/standards for abiotic data
+- Publish data associated with scientific publications and reports
+- Automate workflows
+- Think about data publication at the start of the project
+
+# Towards supporting policy with open reproducible science
 
 ### Rome wasn't built in a day
 
@@ -605,9 +795,62 @@ shapes %>%
   theme_blank()
 ```
 
-### We're almost ready to rock'n roll \vphantom{y}
+### Aspects we can make open? \vphantom{y}
 
 ```{r guidebook5}
+
+open_science_texts <- data.frame(
+  phase = c(
+"vague
+information
+requirements", 
+"Phase I
+supply and demand", 
+"Phase II
+open methodology
+open collected data", 
+"Phase III
+open methodology
+open source analysis scripts", 
+"Phase IV
+open access reports
+open result data", 
+"Phase V
+implementation"
+    ),
+  x = c(-1.5, -z, 0,  z,  0, 1.5),
+  y = c(   0,  0, z,  0, -z, 0)
+)
+
+shapes %>%
+  mutate(background = phase == 0) %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = open_science_texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
+### We're almost ready to rock'n roll \vphantom{y}
+
+```{r guidebook6}
 shapes %>%
   mutate(background = phase == 5) %>%
   ggplot(aes(x = x, y = y)) +
