@@ -244,9 +244,7 @@ data.frame(
 
 # Biometry, Methodology & Quality assurance
 
-## Methodological support
-
-###
+### Methodological support
 
 #### Sir Ronald Aylmer Fisher
 
@@ -395,13 +393,17 @@ dataset %>%
 
 ### Acquisition, development and maintainance of methodologies
 
-> - Concept for setting up long term monitoring
+> - Concept for setting up long term ecological monitoring
 > - Field protocols
 > - Novel statistical techniques
 > - Automation of recurring analyses
 > - Traceability of analyses
 
-## Statistical support
+### Statistical support
+
+#### Karl Pearson
+
+The unity of all science consists alone in its method, not in its material.
 
 ### Provide tools to improve open and reproducible statistical analysis
 
@@ -464,9 +466,7 @@ wordcloud(
 
 ![](20150628_0386.jpg)\ 
 
-## Statistical expertise
-
-###
+### Statistical expertise
 
 #### George E. P. Box
 
@@ -521,21 +521,16 @@ dataset %>%
 
 ### Rome wasn't built in a day
 
-> - Gradual change is key for success
-> - Focus on early adopters and early majority
-> - Stimulation and support is vital
-> - New procedures should lower the burden in the long run
-> - Allow for a long transition period before enforcing change
+- Gradual change is key for success
+- New procedures should lower the burden in the long run
+- Stimulation and support is vital
+- Focus on early adopters and early majority
+- Allow for a long transition period before enforcing change
 
-###
-
-#### John Tukey
-
-The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.
 
 ### The 'good' old days
 
-```{r oldschool}
+```{r oldschool, fig.height = 1}
 theme_set(theme_inbo(6, transparent = TRUE))
 z <- 0.6
 texts <- data.frame(
@@ -615,18 +610,23 @@ triple_arrows <- expand.grid(
     y = extra * 0.1,
     yend = extra * 0.1
   )
-ggplot(shapes, aes(x = x, y = y)) +
-  geom_path(aes(group = phase, colour = phase %in% c(0, 5))) +
+shapes %>%
+  filter(phase %in% c(0, 5)) %>%
+ggplot(aes(x = x, y = y)) +
+  geom_path(aes(group = phase)) +
   geom_segment(
     data = triple_arrows, 
     aes(xend = xend, yend = yend), 
     arrow = arrow(length = unit(2, "mm"), type = "closed")
   ) +
-  geom_text(data = texts, aes(label = gsub("Phase V\n", "", label), colour = phase %in% c(0, 5))) +
-  scale_colour_manual(values = c("TRUE" = inbo.steun.blauw, "FALSE" = NA), guide = "none") +
+  geom_text(data = filter(texts, phase %in% c(0, 5)), aes(label = gsub("Phase V\n", "", label))) +
   coord_fixed() + 
   theme_blank()
 ```
+
+#### John Tukey
+
+The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.
 
 ### 5 stages of preparing long term monitoring
 
