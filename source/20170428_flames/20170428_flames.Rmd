@@ -406,10 +406,10 @@ dataset %>%
 ### Provide tools to improve open and reproducible statistical analysis
 
 > - R
-> - scripted analysis
-> - version control
-> - dynamic documents
-> - corporate identity styles for graphics and dynamic documents
+> - Scripted analysis
+> - Version control
+> - Dynamic documents
+> - Corporate identity styles for graphics and dynamic documents
 
 ### Freeware open source software
 
