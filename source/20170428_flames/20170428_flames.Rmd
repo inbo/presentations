@@ -107,13 +107,13 @@ dataset <- frame_data(
   "Data", 0, -1.5, 0.5, 0.5, -1, "",
   "Design", 1.5, 0, 0.5, 0.5, -1, "",
   "Inference", -1.5, 0, 0.5, 0.5, -1, "",
-  "Discussion", -1.2, 1.1, 0, 1, 4,
+  "Discussion", -1.2, 1.2, 0, 1, 4,
 "- Interpretation results
 - Scope model
 - Validity of research
 - Policy recommendations
 - Policy tools",
-  "Introduction", 0.2, 1.1,  0, 1, 1,
+  "Introduction", 0.2, 1.2,  0, 1, 1,
 "- Concept
 - Hypothesis
 - Motivation",
@@ -134,14 +134,15 @@ dataset %>%
     Title = ifelse(Step == -1, NA, Title)
   ) %>%
   ggplot(aes(x = X, y = Y)) +
-  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2, colour = inbo.hoofd) +
+  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2.3, colour = inbo.hoofd) +
   geom_label(
     aes(label = Title, hjust = Hjust, vjust = Vjust, colour = Step == -1), 
     size = 3, 
     show.legend = FALSE
   ) +
   theme_blank() +
-  scale_x_continuous(expand = c(0.1, 0))
+  scale_x_continuous(expand = c(0.1, 0)) +
+  ylim(-1.5, 1.5)
 ```
 
 ### Partner during the entire lifecycle of research
@@ -152,14 +153,15 @@ dataset %>%
   ggplot(aes(x = X, y = Y)) +
   geom_vline(xintercept = 0, linetype = 2) +
   geom_hline(yintercept = 0, linetype = 2) +
-  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2, colour = inbo.hoofd) +
+  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2.3, colour = inbo.hoofd) +
   geom_label(
     aes(label = Title, hjust = Hjust, vjust = Vjust, colour = Step == -1), 
     size = 3, 
     show.legend = FALSE
   ) +
   theme_blank() +
-  scale_x_continuous(expand = c(0.1, 0))
+  scale_x_continuous(expand = c(0.1, 0)) +
+  ylim(-1.5, 1.5)
 ```
 
 ### Partner during the entire lifecycle of research
@@ -170,14 +172,15 @@ dataset %>%
   ggplot(aes(x = X, y = Y)) +
   geom_vline(xintercept = 0, linetype = 2) +
   geom_hline(yintercept = 0, linetype = 2) +
-  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2, colour = inbo.hoofd) +
+  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2.3, colour = inbo.hoofd) +
   geom_label(
     aes(label = Title, hjust = Hjust, vjust = Vjust, colour = Step == -1), 
     size = 3, 
     show.legend = FALSE
   ) +
   theme_blank() +
-  scale_x_continuous(expand = c(0.1, 0))
+  scale_x_continuous(expand = c(0.1, 0)) +
+  ylim(-1.5, 1.5)
 ```
 
 ### Partner during the entire lifecycle of research
@@ -188,14 +191,15 @@ dataset %>%
   ggplot(aes(x = X, y = Y)) +
   geom_vline(xintercept = 0, linetype = 2) +
   geom_hline(yintercept = 0, linetype = 2) +
-  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2, colour = inbo.hoofd) +
+  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2.3, colour = inbo.hoofd) +
   geom_label(
     aes(label = Title, hjust = Hjust, vjust = Vjust, colour = Step == -1), 
     size = 3, 
     show.legend = FALSE
   ) +
   theme_blank() +
-  scale_x_continuous(expand = c(0.1, 0))
+  scale_x_continuous(expand = c(0.1, 0)) +
+  ylim(-1.5, 1.5)
 ```
 
 ### Partner during the entire lifecycle of research
@@ -206,14 +210,15 @@ dataset %>%
   ggplot(aes(x = X, y = Y)) +
   geom_vline(xintercept = 0, linetype = 2) +
   geom_hline(yintercept = 0, linetype = 2) +
-  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2, colour = inbo.hoofd) +
+  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2.3, colour = inbo.hoofd) +
   geom_label(
     aes(label = Title, hjust = Hjust, vjust = Vjust, colour = Step == -1), 
     size = 3, 
     show.legend = FALSE
   ) +
   theme_blank() +
-  scale_x_continuous(expand = c(0.1, 0))
+  scale_x_continuous(expand = c(0.1, 0)) +
+  ylim(-1.5, 1.5)
 ```
 
 ### Partner during the entire lifecycle of research
@@ -223,14 +228,15 @@ dataset %>%
   ggplot(aes(x = X, y = Y)) +
   geom_vline(xintercept = 0, linetype = 2) +
   geom_hline(yintercept = 0, linetype = 2) +
-  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2, colour = inbo.hoofd) +
+  geom_text(aes(label = Bullets, y = Y - 0.3), hjust = 0, vjust = 1, size = 2.3, colour = inbo.hoofd) +
   geom_label(
     aes(label = Title, hjust = Hjust, vjust = Vjust, colour = Step == -1), 
     size = 3, 
     show.legend = FALSE
   ) +
   theme_blank() +
-  scale_x_continuous(expand = c(0.1, 0))
+  scale_x_continuous(expand = c(0.1, 0)) +
+  ylim(-1.5, 1.5)
 ```
 
 ### Acquisition, development and maintainance of methodologies
