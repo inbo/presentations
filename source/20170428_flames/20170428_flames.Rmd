@@ -56,14 +56,7 @@ science <- staff - admin - sum(wo) - management
 
 ### Instituut voor Natuur- en Bosonderzoek (INBO)
 
-> - Research Institute for Nature and Forest (INBO)
-> - Flemish government
-> - Research and knowledge center
-> - Open data institute (since 2015)
-> - Topics: nature conservation, forestry, hunting, nature and society, ecosystem services, management
-> - Target audience: **policy makers** and stakeholders
-> - Provides data for **international reporting** and **biodiversity research**
-> - Member of international research networks: LTER, LifeWatch, ALTER-net, GBIF, ...
+The research institute for Nature and Forest (INBO) is the Flemish research and knowledge center for nature and its sustainable management and use.
 
 ### 14 teams with scientific staff (`r science` members)
 
