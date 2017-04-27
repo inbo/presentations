@@ -533,9 +533,9 @@ dataset %>%
 
 The combination of some data and an aching desire for an answer does not ensure that a reasonable answer can be extracted from a given body of data.
 
-### 5 stages of preparing long term monitoring
+### The 'good' old days
 
-```{r guidebook}
+```{r oldschool}
 theme_set(theme_inbo(6, transparent = TRUE))
 z <- 0.6
 texts <- data.frame(
@@ -606,6 +606,31 @@ arrows <- data.frame(
     xend = cos(end) * rad,
     yend = sin(end) * rad
   )
+triple_arrows <- expand.grid(
+  extra = c(-1, 0, 1)
+) %>%
+  mutate(
+    x = -1.2,
+    xend = 1.2,
+    y = extra * 0.1,
+    yend = extra * 0.1
+  )
+ggplot(shapes, aes(x = x, y = y)) +
+  geom_path(aes(group = phase, colour = phase %in% c(0, 5))) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_text(data = texts, aes(label = gsub("Phase V\n", "", label), colour = phase %in% c(0, 5))) +
+  scale_colour_manual(values = c("TRUE" = inbo.steun.blauw, "FALSE" = NA), guide = "none") +
+  coord_fixed() + 
+  theme_blank()
+```
+
+### 5 stages of preparing long term monitoring
+
+```{r guidebook}
 triple_arrows <- expand.grid(
   place = c(-1, 1),
   extra = c(-1, 0, 1)
