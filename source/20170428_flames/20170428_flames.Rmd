@@ -74,6 +74,10 @@ The research institute for Nature and Forest (INBO) is the Flemish research and 
 
 ![](KLEURORGANIGRAM_def.png)
 
+###
+
+![](KLEURORGANIGRAM_def_highlight.png)
+
 ### 
 
 #### Peter Diggle paraphrasing Iain Buchan
