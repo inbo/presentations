@@ -516,10 +516,6 @@ dataset %>%
 
 ![](vanermen2015.png)
 
-### Methods that strike a good balance between observer error, sampling error and costs
-
-![Estimating vegetation cover](point_distance.png)
-
 
 # Towards supporting policy with open reproducible science
 
