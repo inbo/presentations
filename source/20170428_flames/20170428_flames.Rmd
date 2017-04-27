@@ -1,5 +1,5 @@
 ---
-title: "Supporting scientific research at INBO"
+title: "How we support scientific research at INBO"
 author: "D. Brosens, P. Desmet, D. Du Seuil, I. Jansen, E. Lommelen, J. Loos, T. Milotic, T. Onkelinx, P. Quataert, F. Piesschaert, H. Van Calster, T. Van Daele, F. Vanderhaeghe, G. Van Spaendonck, S. Van Hoey, P. Verschelde, T. Westra, C. Wils"
 date: "April 28, 2017"
 output:
@@ -33,6 +33,8 @@ library(dplyr)
 theme_set(theme_inbo(6))
 update_geom_defaults("point", list(size = 0.5))
 update_geom_defaults("line", list(size = 0.2))
+update_geom_defaults("path", list(size = 0.2))
+update_geom_defaults("text", list(size = 2))
 theme_blank <- function(){
   theme(
     axis.title = element_blank(),
@@ -56,14 +58,7 @@ science <- staff - admin - sum(wo) - management
 
 ### Instituut voor Natuur- en Bosonderzoek (INBO)
 
-> - Research Institute for Nature and Forest (INBO)
-> - Flemish government
-> - Research and knowledge center
-> - Open data institute (since 2015)
-> - Topics: nature conservation, forestry, hunting, nature and society, ecosystem services, management
-> - Target audience: **policy makers** and stakeholders
-> - Provides data for **international reporting** and **biodiversity research**
-> - Member of international research networks: LTER, LifeWatch, ALTER-net, GBIF, ...
+The research institute for Nature and Forest (INBO) is the Flemish research and knowledge center for nature and its sustainable management and use.
 
 ### 14 teams with scientific staff (`r science` members)
 
@@ -80,6 +75,10 @@ science <- staff - admin - sum(wo) - management
 ### 1 management team (`r management` members)
 
 ![](KLEURORGANIGRAM_def.png)
+
+### \ 
+
+![](KLEURORGANIGRAM_def_highlight.png)
 
 ### 
 
@@ -121,14 +120,6 @@ science <- staff - admin - sum(wo) - management
 - GIS tools
 - Reporting tools
 
-### Example: WUG
-
-![WUG online](wug_online.png)\ 
-
-### Example: WUG
-
-![WUG code on GitHub](wug_github.png)\ 
-
 ### Provide support
 
 - Documentation
@@ -142,26 +133,24 @@ science <- staff - admin - sum(wo) - management
 
 ![Open data policy](open_data_policy.png)\ 
 
-### 
-
-But what does that mean and how did we get there?
+###
 
 #### The Open Definition
 
 Open data and content can be **freely used, modified, and shared** by **anyone** for **any purpose**.
 
-### Considered open if following requirements are met
+### Open data
 
-> 1. With open license or status
-> 2. Accessible
-> 3. Machine readable
-> 4. In open format
+1. Has an open license (legal status)
+2. Is accessible
+3. Is machine readable
+4. Is provided in an open format
 
 ### Why open data for research?
 
-> - Increase discoverability
+> - Discoverability
 > - Increase potential use
-> - Increase collaborations
+> - Collaborations
 > - Transparent science
 
 ### Move towards open data
@@ -171,11 +160,7 @@ Open data and content can be **freely used, modified, and shared** by **anyone**
 > - Funding agencies: e.g. Horizon 2020
 > - Research journals: deposit data in an open respository
 
-### 2009
-
-Strategic goal to manage and disclose (biodiversity) data
-
-### 2011: First dataset published on GBIF
+### 2011: Publication of the first dataset on GBIF
 
 ![http://www.gbif.org/dataset/271c444f-f8d8-4986-b748-e7367755c0c1](gbif_florabank.png)\ 
 
@@ -185,35 +170,11 @@ Strategic goal to manage and disclose (biodiversity) data
 
 ### Data publication process
 
-- Format data to international Darwin Core standard
+- Format data to the international Darwin Core standard
 - Document data with metadata (also standardized)
 - Publish dataset online
 - Register dataset with GBIF
 - (Re)publish versioned updates or corrections
-
-### 2012: First data paper
-
-![https://doi.org/10.3897/phytokeys.12.2849](data_paper_florabank.png)\ 
-
-### 2012: Start of the LifeWatch project
-
-![Gull tracking data in breeding areas](lifewatch_gulls_map.png)\ 
-
-### 2013: Choose a license
-
-![Creative Commons zero waiver](cc0.png)
-
-### 2013: GBIF license consultation
-
-![GBIF license consultation](gbif_license_consultation.png)\ 
-
-### 2014: Bouchout declaration
-
-![Bouchout declaration](bouchout_declaration.png)\ 
-
-### 2014: Biological Valuation Map (BVM) as open data
-
-![http://www.geopunt.be/catalogus/datasetfolder/4/48b805e2-3aa1-4d34-b49b-1802e85c4e0c/1acb23e7-09b0-4d92-a0a1-61e4c9ece79b](geopunt_bwk_2014.png)\ 
 
 ### 2015: INBO open data policy
 
@@ -221,19 +182,18 @@ Strategic goal to manage and disclose (biodiversity) data
 
 ### Guidelines of the open data policy
 
-> 1. Policy applies to data we own & is bound by legal exceptions
-> 2. Data is eligible for publication 12 months after collecting
-> 3. Aim to publish collected data (from major data systems)
-> 4. Aim to publish result data (associated with publications)
-> 5. Publish as open data (defined by Open Definition)
-> 6. Publish under CC0 waiver
-> 7. Encourage proper use with INBO norms for data use
-> 8. Document data with metadata
-> 9. Start using data management plans (DMP)
+> 1. Policy applies to **data we own** & is bound by legal exceptions
+> 2. Aim to publish **collected data** (from major data systems)
+> 3. Aim to publish **result data** (associated with publications)
+> 4. Publish as **open data** as defined by the Open Definition
+> 5. Publish under **CC0 waiver**
+> 6. Encourage proper data use with **norms**
+> 7. Document data with **metadata**
+> 8. Start using **data management plans** (DMP)
 
-### INBO on GBIF
+### We are now one of the major data publishers on GBIF
 
-![http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b](gbif_inbo.png)\ 
+![Gull tracking data in breeding areas](lifewatch_gulls_map.png)\ 
 
 ### Published data
 
@@ -245,7 +205,8 @@ data.frame(
 ) %>%
   ggplot(aes(x = published_datasets, y = published_occurrences, label = published_years)) +
   geom_point() +
-  geom_text(vjust = -.1, hjust = -.1, size = 2) +
+  geom_path(arrow = arrow(length = unit(3, "mm"), type = "closed")) +
+  geom_text(vjust = 1.1, hjust = -.1) +
   scale_x_continuous("Number of published datasets", limits = c(0, NA), expand = c(0.07, 0)) +
   scale_y_continuous("Number of published occurrences (in millions)", limits = c(0, NA))
 ```
@@ -260,7 +221,8 @@ data.frame(
 ) %>%
   ggplot(aes(x = downloaded_downloads, y = downloaded_occurrences, label = downloaded_years)) +
   geom_point() +
-  geom_text(vjust = -.1, hjust = -.1, size = 2) +
+  geom_path(arrow = arrow(length = unit(3, "mm"), type = "closed")) +
+  geom_text(vjust = 1.1, hjust = -.1) +
   scale_x_continuous("Number of downloads (in thousands)", limits = c(0, NA), expand = c(0.07, 0)) +
   scale_y_continuous("Number of downloaded occurrences (in billions)", limits = c(0, NA))
 ```
@@ -269,7 +231,7 @@ data.frame(
 
 ![http://opendata.vlaanderen.be/organization/inbo](vodp_inbo.png)\ 
 
-### Open documentation on GitHub
+### Openly document process on GitHub
 
 ![Data publication repository](github_bird_tracking.png)\ 
 
@@ -277,8 +239,8 @@ data.frame(
 
 - International platforms/standards for abiotic data
 - Publish data associated with scientific publications and reports
-- Automate workflows
 - Think about data publication at the start of the project
+- Automate workflows
 
 # Biometry, Methodology & Quality assurance
 
@@ -670,7 +632,7 @@ ggplot(shapes, aes(x = x, y = y)) +
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = label), size = 2) +
+  geom_text(data = texts, aes(label = label)) +
   coord_fixed() + 
   theme_blank()
 ```
@@ -692,7 +654,7 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = label), size = 2) +
+  geom_text(data = texts, aes(label = label)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme_blank()
@@ -715,7 +677,7 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = label, colour = phase == 1), size = 2, show.legend = FALSE) +
+  geom_text(data = texts, aes(label = label, colour = phase == 1), show.legend = FALSE) +
   scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
@@ -739,7 +701,7 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = label, colour = phase == 2), size = 2, show.legend = FALSE) +
+  geom_text(data = texts, aes(label = label, colour = phase == 2), show.legend = FALSE) +
   scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
@@ -763,7 +725,7 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = label, colour = phase == 3), size = 2, show.legend = FALSE) +
+  geom_text(data = texts, aes(label = label, colour = phase == 3), show.legend = FALSE) +
   scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
@@ -787,14 +749,14 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = label, colour = phase == 4), size = 2, show.legend = FALSE) +
+  geom_text(data = texts, aes(label = label, colour = phase == 4), show.legend = FALSE) +
   scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme_blank()
 ```
 
-### Aspects we can make open? \vphantom{y}
+### Which aspects can we make open? \vphantom{y}
 
 ```{r guidebook5}
 
@@ -839,7 +801,7 @@ shapes %>%
   ) +
   geom_text(
     data = open_science_texts, 
-    aes(label = label, colour = phase  %in% c(0, 2:4)), size = 2, show.legend = FALSE
+    aes(label = label, colour = phase  %in% c(0, 2:4)), show.legend = FALSE
   ) +
   scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
@@ -870,7 +832,7 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = texts, aes(label = label, colour = phase == 5), size = 2, show.legend = FALSE) +
+  geom_text(data = texts, aes(label = label, colour = phase == 5), show.legend = FALSE) +
   scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
