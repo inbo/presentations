@@ -569,8 +569,6 @@ dataset %>%
 > - New procedures should lower the burden in the long run
 > - Allow for a long transition period before enforcing change
 
-## Designing and evaluating long term monitoring
-
 ###
 
 #### John Tukey
@@ -801,30 +799,32 @@ shapes %>%
 ```{r guidebook5}
 
 open_science_texts <- data.frame(
-  phase = c(
-"vague
+  phase = 0:5,
+  label = c(
+"prioritized
 information
 requirements", 
-"Phase I
-supply and demand", 
+"Phase I", 
 "Phase II
-open methodology
-open collected data", 
+collected data
+methodology
+", 
 "Phase III
-open methodology
-open source analysis scripts", 
+analysis scripts
+methodology
+", 
 "Phase IV
-open access reports
-open result data", 
+result data
+access reports", 
 "Phase V
-implementation"
+"
     ),
   x = c(-1.5, -z, 0,  z,  0, 1.5),
   y = c(   0,  0, z,  0, -z, 0)
 )
 
 shapes %>%
-  mutate(background = phase == 0) %>%
+  mutate(background = phase %in% c(0, 2:4)) %>%
   ggplot(aes(x = x, y = y)) +
   geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
   geom_segment(
@@ -837,7 +837,11 @@ shapes %>%
     aes(xend = xend, yend = yend), 
     arrow = arrow(ends = "both", length = unit(2, "mm"))
   ) +
-  geom_text(data = open_science_texts, aes(label = phase), size = 2) +
+  geom_text(
+    data = open_science_texts, 
+    aes(label = label, colour = phase  %in% c(0, 2:4)), size = 2, show.legend = FALSE
+  ) +
+  scale_colour_manual(values = c("TRUE" = inbo.bruinrood, "FALSE" = inbo.steun.blauw)) +
   coord_fixed() + 
   scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
   theme(
