@@ -5,3 +5,6 @@
 *.Rproj
 *.html
 *.pdf
+*_cache
+
+.DS_Store
