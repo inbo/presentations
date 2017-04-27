@@ -222,6 +222,31 @@ dataset %>%
 
 But what does that mean and how did we get there?
 
+#### The Open Definition
+
+Open data and content can be **freely used, modified, and shared** by **anyone** for **any purpose**.
+
+### Considered open if following requirements are met
+
+> 1. With open license or status
+> 2. Accessible
+> 3. Machine readable
+> 4. In open format
+
+### Why open data for research?
+
+> - Increase discoverability
+> - Increase potential use
+> - Increase collaborations
+> - Transparent science
+
+### Move towards open data
+
+> - EC: Directive on the re-use of public sector information (2003/98/EG & 2013/37/EU)
+> - Flemish government: open data should become the norm for the Flemish government (_2011 conceptnota open data_)
+> - Funding agencies: e.g. Horizon 2020
+> - Research journals: deposit data in an open respository
+
 ### 2009
 
 Strategic goal to manage and disclose (biodiversity) data
@@ -269,18 +294,6 @@ Strategic goal to manage and disclose (biodiversity) data
 ### 2015: INBO open data policy
 
 ![Open data policy](open_data_policy.png)\ 
-
-### What are open data?
-
-- ...
-
-### Why open data: governmental context
-
-- ...
-
-### Why open data: research context
-
-- ...
 
 ### Guidelines of the open data policy
 
