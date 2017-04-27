@@ -84,7 +84,7 @@ science <- staff - admin - sum(wo) - management
 
 ### 
 
-#### Peter Diggle
+#### Peter Diggle paraphrasing Iain Buchan
 
 **Informatics** seeks to maximize the **_utility_** of data, whereas **statistics** seeks to minimize the uncertainty that is associated with the **_interpretation_** of data.
 
@@ -356,7 +356,9 @@ dataset %>%
   )
 ```
 
-### Distance based estimates of vegetation cover
+### Methods that strike a good balance between observer error, sampling error and costs
+
+> - Distance based estimates of vegetation cover
 
 ![](vegetation.jpg)\ 
 
