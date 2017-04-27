@@ -299,7 +299,7 @@ Strategic goal to manage and disclose (biodiversity) data
 
 > 1. Policy applies to data we own & is bound by legal exceptions
 > 2. Data is eligible for publication 12 months after collecting
-> 3. Aim to publish source data (from major data systems)
+> 3. Aim to publish collected data (from major data systems)
 > 4. Aim to publish result data (associated with publications)
 > 5. Publish as open data (defined by Open Definition)
 > 6. Publish under CC0 waiver
@@ -346,7 +346,7 @@ downloaded_occurrences = c(504549089, 1603418177, 2764760091, 4178367077)
 - Automate workflows
 - Think about data publication at the start of the project
 
-# Towards supporting policy based on open science
+# Towards supporting policy with open reproducible science
 
 ### Rome wasn't built in a day
 
@@ -614,9 +614,62 @@ shapes %>%
   )
 ```
 
-### We're almost ready to rock'n roll \vphantom{y}
+### Aspects we can make open? \vphantom{y}
 
 ```{r guidebook5}
+
+open_science_texts <- data.frame(
+  phase = c(
+"vague
+information
+requirements", 
+"Phase I
+supply and demand", 
+"Phase II
+open methodology
+open collected data", 
+"Phase III
+open methodology
+open source analysis scripts", 
+"Phase IV
+open access reports
+open result data", 
+"Phase V
+implementation"
+    ),
+  x = c(-1.5, -z, 0,  z,  0, 1.5),
+  y = c(   0,  0, z,  0, -z, 0)
+)
+
+shapes %>%
+  mutate(background = phase == 0) %>%
+  ggplot(aes(x = x, y = y)) +
+  geom_polygon(aes(group = phase, fill = background), show.legend = FALSE) +
+  geom_segment(
+    data = triple_arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(length = unit(2, "mm"), type = "closed")
+  ) +
+  geom_segment(
+    data = arrows, 
+    aes(xend = xend, yend = yend), 
+    arrow = arrow(ends = "both", length = unit(2, "mm"))
+  ) +
+  geom_text(data = open_science_texts, aes(label = phase), size = 2) +
+  coord_fixed() + 
+  scale_fill_manual(values = c("TRUE" = inbo.steun.geelgroen, "FALSE" = NA)) +
+  theme(
+    axis.title = element_blank(),
+    axis.text = element_blank(),
+    axis.ticks = element_blank(),
+    panel.background = element_blank(),
+    panel.grid = element_blank()
+  )
+```
+
+### We're almost ready to rock'n roll \vphantom{y}
+
+```{r guidebook6}
 shapes %>%
   mutate(background = phase == 5) %>%
   ggplot(aes(x = x, y = y)) +
