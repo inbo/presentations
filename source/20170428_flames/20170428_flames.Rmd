@@ -163,27 +163,23 @@ dataset %>%
 
 ![](vegetation.jpg)\ 
 
-# Data lab
+# Open data & open science
 
 ###
 
-*image of BWK monitoring*
+![Human species monitoring](slide5.jpg)\ 
 
 ###
 
-*image of seabirds at sea monitoring*
+![Machine species monitoring](oo_73828.jpg)\ 
 
 ###
 
-*image of bird with tracker*
+![Abiotic monitoring](BRGP036A_2.jpg)\ 
 
 ###
 
-*image of WATINA monitoring*
-
-###
-
-*image of lab analysis*
+![Lab analysis](slide7.jpg)\ 
 
 ## Support scientific staff in data life cycle
 
@@ -232,15 +228,15 @@ Strategic goal to manage and disclose (biodiversity) data
 
 ### 2011: first dataset on GBIF
 
-*image of Florabank on GBIF*
+![http://www.gbif.org/dataset/271c444f-f8d8-4986-b748-e7367755c0c1](gbif_florabank.png)\ 
 
-### Global Biodiversity Information Facility
+### Global Biodiversity Information Facility (GBIF)
 
-*image of GBIF portal*
+![http://www.gbif.org](gbif_homepage.png)\ 
 
 ### Data publication process
 
-> - Format data to Darwin Core standard
+> - Format data to international Darwin Core standard
 > - Document data with metadata (also standardized)
 > - Publish dataset online
 > - Register dataset with GBIF
@@ -248,23 +244,27 @@ Strategic goal to manage and disclose (biodiversity) data
 
 ### 2012: first data paper
 
-*image of Florabank paper
+![https://doi.org/10.3897/phytokeys.12.2849](data_paper_florabank.png)\ 
 
-### year: BWK publicly available
+### 2012: start of the LifeWatch project
 
-*image of BWK*
+![Gull tracking data in breeding areas](lifewatch_gulls_map.png)\ 
 
-### 2012: start of LifeWatch project
+### 2013: choose a data license
 
-*image of bird tracking data*
+![Creative Commons zero waiver](cc0.png)
 
-### 2013: data license
+### 2013: license consulation on GBIF
 
-*license consultation GBIF*
+![GBIF license consultation](gbif_license_consultation.png)\ 
 
 ### 2014: Bouchout declaration
 
-*image of declaration*
+![Bouchout declaration](bouchout_declaration.png)\ 
+
+### 2014: Biological Valuation Map (BVM) as open data
+
+![http://www.geopunt.be/catalogus/datasetfolder/4/48b805e2-3aa1-4d34-b49b-1802e85c4e0c/1acb23e7-09b0-4d92-a0a1-61e4c9ece79b](geopunt_bwk_2014.png)\ 
 
 ### 2015: INBO open data policy
 
@@ -295,17 +295,37 @@ Strategic goal to manage and disclose (biodiversity) data
 9. Researchers apply the open data policy.
 10. The INBO Information & Data Center supports researchers in the application of the open data policy.
 
-### INBO on GBIF now
+### INBO on GBIF
 
-*Image of INBO on GBIF*
+![http://www.gbif.org/publisher/1cd669d0-80ea-11de-a9d0-f1765f95f18b](gbif_inbo.png)\ 
+
+### Published data
+
+```r
+published_years = c(2011, 2012, 2013, 2014, 2015, 2016)
+published_datasets = c(2, 6, 13, 17, 20, 27)
+published_occurrences = c(3325224, 3478955, 4009432, 5191428, 7682739, 10203633)
+```
+
+*Bar chart with years on x axis, datasets on y1, occurrences on y2*
 
 ### Use of data
 
-*Data use chart*
+```r
+downloaded_years = c(2013, 2014, 2015, 2016)
+downloaded_downloads = c(2091, 11206, 15382, 17974)
+downloaded_occurrences = c(504549089, 1603418177, 2764760091, 4178367077)
+```
 
-### Open documentation
+*Bar chart with years on x axis, downloads on y1, occurrences on y2*
 
-*Image of data-publication repo*
+### Flemish open data portal
+
+![http://opendata.vlaanderen.be/organization/inbo](vodp_inbo.png)\ 
+
+### Open documentation on GitHub
+
+![Data publication repository](github_bird_tracking.png)\ 
 
 ### Challenges
 
