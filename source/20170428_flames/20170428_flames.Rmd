@@ -131,9 +131,7 @@ The research institute for Nature and Forest (INBO) is the Flemish research and 
 
 ![Open data policy](open_data_policy.png)\ 
 
-### 
-
-But what does that mean and how did we get there?
+###
 
 #### The Open Definition
 
@@ -160,10 +158,6 @@ Open data and content can be **freely used, modified, and shared** by **anyone**
 > - Funding agencies: e.g. Horizon 2020
 > - Research journals: deposit data in an open respository
 
-### 2009
-
-Strategic goal to manage and disclose (biodiversity) data
-
 ### 2011: Publication of the first dataset on GBIF
 
 ![http://www.gbif.org/dataset/271c444f-f8d8-4986-b748-e7367755c0c1](gbif_florabank.png)\ 
@@ -179,30 +173,6 @@ Strategic goal to manage and disclose (biodiversity) data
 - Publish dataset online
 - Register dataset with GBIF
 - (Re)publish versioned updates or corrections
-
-### 2012: First data paper
-
-![https://doi.org/10.3897/phytokeys.12.2849](data_paper_florabank.png)\ 
-
-### 2012: Start of the LifeWatch project
-
-![Gull tracking data in breeding areas](lifewatch_gulls_map.png)\ 
-
-### 2013: Choose a license
-
-![Creative Commons zero waiver](cc0.png)
-
-### 2013: GBIF license consultation
-
-![GBIF license consultation](gbif_license_consultation.png)\ 
-
-### 2014: Bouchout declaration
-
-![Bouchout declaration](bouchout_declaration.png)\ 
-
-### 2014: Biological Valuation Map (BVM) as open data
-
-![http://www.geopunt.be/catalogus/datasetfolder/4/48b805e2-3aa1-4d34-b49b-1802e85c4e0c/1acb23e7-09b0-4d92-a0a1-61e4c9ece79b](geopunt_bwk_2014.png)\ 
 
 ### 2015: INBO open data policy
 
